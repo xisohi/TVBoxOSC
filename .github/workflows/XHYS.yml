@@ -1,4 +1,4 @@
-name: XHYS
+name: Test
 
 on:
   schedule:
@@ -13,10 +13,6 @@ on:
         description: '构建后不提交发布新版'
         required: false
         type: boolean
-      testOption:
-        description: 'arm64支持，不支持ijk解码'
-        required: false
-        type: boolean
 
 jobs:
   build:
@@ -28,6 +24,7 @@ jobs:
           - userName: xisohi
             repoName: XHYS
             branchName: main
+            java_ver: 17
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -65,13 +62,6 @@ jobs:
         run: |
           #zip -q -x ".git/*" -x  ".github/*" -r source-${{ env.commitS }}.zip .
           tar -cJf source-${{ env.commitS }}.tar.xz --exclude=.git --exclude=.github *
-      - name: Option For Test
-        if: ${{ inputs.testOption }}
-        working-directory: TVBoxOSC
-        run: |
-          #添加arm64支持，不支持ijk解码
-          sed -i "/armeabi-v7a[\'\"]$/s#\$#, 'arm64-v8a'#" app/build.gradle
-          sed -i "/armeabi-v7a[\'\"]$/s#\$#, 'arm64-v8a'#" player/build.gradle
       - name: Release Apk Sign
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
@@ -86,21 +76,11 @@ jobs:
           sed -i '$a\RELEASE_KEY_ALIAS=TVBoxOSC'            ./gradle.properties
           sed -i '$a\RELEASE_STORE_PASSWORD=xh8621989'       ./gradle.properties
           sed -i '$a\RELEASE_KEY_PASSWORD=xh8621989'         ./gradle.properties
-      - name: Check JAVA Version
-        if: ${{ env.commit }}
-        working-directory: TVBoxOSC
-        run: |
-          setup_java_ver=$(grep -o 'JavaVersion.VERSION_[0-9_]\+' app/build.gradle |head -1 |sed 's/.*_//')
-          if [ $setup_java_ver -gt 11 ]; then
-            echo "setup_java_ver=$setup_java_ver" >> $GITHUB_ENV
-          else
-            echo "setup_java_ver=17" >> $GITHUB_ENV
-          fi
       - uses: actions/setup-java@v4
-        if: ${{ env.setup_java_ver }}
+        if: ${{ matrix.java_ver }}
         with:
           distribution: temurin
-          java-version: ${{ env.setup_java_ver }}
+          java-version: ${{ matrix.java_ver }}
       - uses: gradle/actions/setup-gradle@v3
         if: ${{ env.commit }}
       - name: Build With Gradle
@@ -127,6 +107,7 @@ jobs:
             # 移动并重命名文件
             mv "$file" "apk/$new_base"
           done
+          mv source-${{ env.commitS }}.* apk/
       - name: Release Note
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
@@ -182,11 +163,12 @@ jobs:
           removeArtifacts: true
           artifacts: |
             TVBoxOSC/apk/*.apk
-            TVBoxOSC/source-${{ env.commitS }}.*
+            TVBoxOSC/apk/source-${{ env.commitS }}.*
       - name: Push to master
         if: ${{ env.commit }}
         run: |
           rm -rf TVBoxOSC
+          git reset --hard
           sed -i '/url =/d' ./.git/config
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
