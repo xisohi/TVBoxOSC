@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 240626,
-  "VersionName": "240626",
-  "UploadTime": "2024-06-25 21:27:21",
-  "ModifyContent": "1: Update build.gradle\n",
-  "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/2406252127/TVBox_XHYS-armeabi-generic.apk",
-  "ApkSize": ,
-  "ApkMd5": ""
+  "VersionCode": 240712,
+  "VersionName": "240712",
+  "UploadTime": "2024-07-02 09:48:21",
+  "ModifyContent": "",
+  "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/2407020948/TVBox_XHYS-armeabi-generic.apk",
+  "ApkSize": 27439,
+  "ApkMd5": "03311d89f2f10a724a40b08d2d14dfe2"
 }
