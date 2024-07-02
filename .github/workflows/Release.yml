@@ -122,7 +122,7 @@ jobs:
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: |
-          lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
+          lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
           export LESSCHARSET=utf-8
           echo -e "Credit: [${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.repoName }}-Release.log
           if [ "${{ env.commit }}" == "${lastCommit}" ]; then
@@ -135,7 +135,7 @@ jobs:
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: |
-          lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
+          lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
           export LESSCHARSET=utf-8
           echo -e "Credit: [${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.branchName }}.log
           if [ "${{ env.commit }}" == "${lastCommit}" ]; then
@@ -187,7 +187,7 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}"
           git pull --rebase
-          sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
+          sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
           sed -i 's/"code": "[a-zA-Z0-9]*"/"code": "${{ env.versionCode }}"/' update/${{ matrix.branchName }}.json
           sed -i 's/"name": "[a-zA-Z0-9]*"/"name": "${{ env.versionName }}"/' update/${{ matrix.branchName }}.json
           sed -i 's|"desc": ".*"|"desc": "${{ env.desc }}"|g' update/${{ matrix.branchName }}.json
