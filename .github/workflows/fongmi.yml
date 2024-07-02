@@ -135,13 +135,13 @@ jobs:
           #rm -rf apk/
           mkdir -p apk/
           for file in `find ~ -name "*leanback-java-arm64*.apk" -print`; do
-            mv "$file" apk/${{ matrix.branchName }}_leanback-java-arm64_v8a.apk
+            mv "$file" apk/leanback-java-arm64_v8a.apk
           done
           for file in `find ~ -name "*leanback-java-armeabi*.apk" -print`; do
-            mv "$file" apk/${{ matrix.branchName }}_leanback-java-armeabi_v7a.apk
+            mv "$file" apk/leanback-java-armeabi_v7a.apk
           done
           for file in `find ~ -name "*mobile-java-arm64*.apk" -print`; do
-            mv "$file" apk/${{ matrix.branchName }}_mobile-java-arm64_v8a.apk
+            mv "$file" apk/mobile-java-arm64_v8a.apk
             #mv "$file" apk/mobile_java_${{ matrix.branchName }}_${{ env.tag }}.apk
           done
 
@@ -173,7 +173,7 @@ jobs:
 
       - name: Build Upgrade content
         if: ${{ env.commit }}
-        working-directory: TVBoxOSC
+        working-directory: TVBoxOSC/media
         run: |
           echo "versionCode=$(grep -oP 'versionCode \K\d+' app/build.gradle)" >> $GITHUB_ENV
           echo "versionName=$(grep -oP 'versionName \"\K[^\"]+' app/build.gradle)" >> $GITHUB_ENV
@@ -183,8 +183,8 @@ jobs:
         uses: ncipollo/release-action@v1
         if: ${{ env.commit }}
         with:
-          name: ${{ env.tag }}
-          tag: ${{ env.tag }}
+          name: ${{ matrix.repoName }}
+          tag: ${{ matrix.branchName }}
           bodyFile: TVBoxOSC/media/apk/${{ matrix.userName }}-Release.log
           allowUpdates: true
           removeArtifacts: true
