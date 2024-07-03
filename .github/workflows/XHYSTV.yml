@@ -13,10 +13,6 @@ on:
         description: '构建后不提交发布新版'
         required: false
         type: boolean
-      testOption:
-        description: 'arm64支持，不支持ijk解码'
-        required: false
-        type: boolean
 
 jobs:
   build:
@@ -28,6 +24,7 @@ jobs:
           - userName: xisohi
             repoName: XHYSTV
             branchName: main
+            java_ver: 17
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -65,13 +62,6 @@ jobs:
         run: |
           #zip -q -x ".git/*" -x  ".github/*" -r source-${{ env.commitS }}.zip .
           tar -cJf source-${{ env.commitS }}.tar.xz --exclude=.git --exclude=.github *
-      - name: Option For Test
-        if: ${{ inputs.testOption }}
-        working-directory: TVBoxOSC
-        run: |
-          #添加arm64支持，不支持ijk解码
-          sed -i "/armeabi-v7a[\'\"]$/s#\$#, 'arm64-v8a'#" app/build.gradle
-          sed -i "/armeabi-v7a[\'\"]$/s#\$#, 'arm64-v8a'#" player/build.gradle
       - name: Release Apk Sign
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
@@ -86,20 +76,12 @@ jobs:
           sed -i '$a\RELEASE_KEY_ALIAS=TVBoxOSC'            ./gradle.properties
           sed -i '$a\RELEASE_STORE_PASSWORD=xh8621989'       ./gradle.properties
           sed -i '$a\RELEASE_KEY_PASSWORD=xh8621989'         ./gradle.properties
-      - name: Check JAVA Version
-        if: ${{ env.commit }}
-        working-directory: TVBoxOSC
-        run: |
-          setup_java_ver=$(grep -o 'JavaVersion.VERSION_[0-9_]\+' app/build.gradle |head -1 |sed 's/.*_//')
-          if [ $setup_java_ver -gt 11 ]; then
-            echo "setup_java_ver=$setup_java_ver" >> $GITHUB_ENV
-          fi
       - uses: actions/setup-java@v4
-        if: ${{ env.setup_java_ver }}
+        if: ${{ matrix.java_ver }}
         with:
           distribution: temurin
-          java-version: ${{ env.setup_java_ver }}
-      - uses: gradle/gradle-build-action@v2
+          java-version: ${{ matrix.java_ver }}
+      - uses: gradle/actions/setup-gradle@v3
         if: ${{ env.commit }}
       - name: Build With Gradle
         if: ${{ env.commit }}
@@ -116,18 +98,20 @@ jobs:
           for file in `find ~ -name "*release*.apk" -print`; do
             mv "$file" apk/TVBox_${{ matrix.userName }}_${{ env.tag }}.apk
           done
+          mv source-${{ env.commitS }}.* apk/
       - name: Release Note
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: |
           lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
           export LESSCHARSET=utf-8
-          echo -e "Credit: [${{ matrix.userName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.repoName }}-Release.log
+          echo -e "Credit: [${{ matrix.userName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:\n\`\`\`" > apk/${{ matrix.repoName }}-Release.log
           if [ "${{ env.commit }}" == "${lastCommit}" ]; then
             git log --pretty=format:%B ${{ env.commitS }} -1 |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> apk/${{ matrix.repoName }}-Release.log
           else
             git log --pretty=format:%B ${{ env.commitS }}...${lastCommit:0:7} |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> apk/${{ matrix.repoName }}-Release.log
           fi
+          echo -e '\n```' >> apk/${{ matrix.userName }}-Release.log
       - name: Build Upgrade log
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
@@ -150,7 +134,7 @@ jobs:
           echo "ApkMd5=$(md5sum apk/${{ matrix.repoName }}_Release.apk | awk '{ print $1 }')" >> $GITHUB_ENV
           echo "ApkSize=$(ls -l --block-size=K apk/${{ matrix.repoName }}_Release.apk | awk '{ print $5 }'|grep -o '[0-9]\+')" >> $GITHUB_ENV
       - name: Upload App To Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ env.commit }}
         with:
           name: ${{ matrix.userName }}-${{ matrix.repoName }}
@@ -171,11 +155,12 @@ jobs:
           removeArtifacts: true
           artifacts: |
             TVBoxOSC/apk/*.apk
-            TVBoxOSC/source-${{ env.commitS }}.*
+            TVBoxOSC/apk/source-${{ env.commitS }}.*
       - name: Push to master
         if: ${{ env.commit }}
         run: |
           rm -rf TVBoxOSC
+          git reset --hard
           sed -i '/url =/d' ./.git/config
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
