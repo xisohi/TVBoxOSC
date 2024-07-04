@@ -147,6 +147,7 @@
 		{"key": "hipy_游子视频","name": "游子视频","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/游子视频.js","searchable": 1,"quickSearch": 0,"filterable": 1},
 		{"key": "hipy_饭团影视","name": "饭团影视","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/饭团影视.js","searchable": 1,"quickSearch": 0,"filterable": 1},
 		{"key": "hipy_饺子影院","name": "饺子影院","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/饺子影院.js","searchable": 1,"quickSearch": 0,"filterable": 1},
+		{"key": "hipy_闪雷电","name": "闪雷电","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/闪雷电.js","searchable": 1,"quickSearch": 0,"filterable": 1},
 
 		{"key": "hipy_热片网","name": "热片网","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/热片网.js","searchable": 1,"quickSearch": 0,"filterable": 1},
 		{"key": "hipy_短剧在线","name": "短剧在线","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/短剧在线.js","searchable": 1,"quickSearch": 0,"filterable": 1},
@@ -220,6 +221,7 @@
 		{"key": "hipy_爱车MV清风DJ[听]","name": "爱车MV[听]","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/爱车MV[听].js","searchable": 1,"quickSearch": 0,"filterable": 1},
 		{"key": "hipy_KTV歌厅[听]","name": "KTV歌厅[听]","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/KTV歌厅[听].js","searchable": 1,"quickSearch": 0,"filterable": 1},
 		{"key": "hipy_啊哈DJ[听]","name": "啊哈DJ[听]","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/啊哈DJ[听].js","searchable": 1,"quickSearch": 0,"filterable": 1},
+		{"key": "hipy_世纪DJ音乐网[听]","name": "世纪DJ音乐网[听]","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/世纪DJ音乐网[听].js","searchable": 1,"quickSearch": 0,"filterable": 1},
 
 		{"key": "hipy_7猫小说[书]","name": "7猫小说[书]","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/7猫小说[书].js","searchable": 1,"quickSearch": 0,"filterable": 1},
 		{"key": "hipy_丫丫电子书[书]","name": "丫丫电子书[书]","type": 3,"api": "https://hipy-server.lcjly.cn/app/t4/files/drpy_libs/drpy2.min.js","ext":"https://hipy-server.lcjly.cn/app/t4/files/drpy_js/丫丫电子书[书].js","searchable": 1,"quickSearch": 0,"filterable": 1},
