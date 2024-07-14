@@ -1,5 +1,5 @@
 {
-  "code": "242",
+  "code": "243",
   "name": "2.4.2",
-  "desc": "1: Optimize backup check\n2: Update OkCookieJar.java\n"
+  "desc": "1: Fix dialog bug\n2: Adjust layout\n3: Update OkHttp.java\n4: Fix flag bug\n5: Set okhttp protocols\n6: Update sdk\n7: Update CustomKeyboard.java\n8: Update build.gradle\n9: Update CustomKeyboard.java\n10: Update build.gradle\n11: Optimize toggle keyboard\n12: Update Trans.java\n13: Fix first char search\n14: Update build.gradle\n15: Use media3 ua\n16: Clean code\n17: Fix bug\n18: Ry bopomofo keyboard\n19: Set chrome ua as default\n"
 }
