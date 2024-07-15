@@ -179,14 +179,4 @@ jobs:
           git add --all
           git commit -m "${{ env.commit }}"
           git push -u -f origin master
-  clean:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Delete older workflow runs and artifacts
-        uses: Mattraks/delete-workflow-runs@main
-        with:
-          token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          retain_days: 14
-          keep_minimum_runs: 10
+
