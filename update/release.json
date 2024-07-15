@@ -1,5 +1,5 @@
 {
-  "code": "241",
+  "code": "243",
   "name": "2.4.1",
-  "desc": ""
+  "desc": "1: merge dev\n2: Dev\n3: build.gradle\n4: Fix flag bug\n5: Update sdk\n6: Update CustomKeyboard.java\n7: Optimize toggle keyboard\n8: Update Trans.java\n9: Fix first char search\n10: Fix first char search about no result\n11: Update site search\n12: Fix bug\n13: Fix build\n14: Clean code\n15: Ry bopomofo keyboard\n16: add bopomofo\n17: add bopomofo keyboard\n18: Fix restartApp\n19: Update jianpian cache\n20: Revert "Fix bug"\n21: This reverts commit 38b4a30aae4c222c2ee2088e833241d471707777.\n22: Fix bug\n23: Add push image\n24: Support youtube playlist\n25: [mobile] site search\n26: Update restore\n27: Update Vod.java\n"
 }
