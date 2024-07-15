@@ -177,7 +177,7 @@ jobs:
           git pull --rebase
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
           sed -i 's/"VersionCode": [a-zA-Z0-9]*/"VersionCode": ${{ env.VersionCode }}/' update/${{ matrix.repoName }}.json
-          sed -i 's/"VersionName": "[a-zA-Z0-9]*"/"VersionName": "${{ env.VersionCode }}"/' update/${{ matrix.repoName }}.json
+          sed -i 's/"VersionName": "[^"]*"/"VersionName": "${{ env.VersionCode }}"/' update/${{ matrix.repoName }}.json
           sed -i 's|"UploadTime": ".*"|"UploadTime": "${{ env.UploadTime }}"|g' update/${{ matrix.repoName }}.json
           sed -i 's|"ModifyContent": ".*"|"ModifyContent": "${{ env.ModifyContent }}"|g' update/${{ matrix.repoName }}.json
           sed -i 's|"DownloadUrl": ".*"|"DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/${{ env.tag }}/TVBox_${{ matrix.repoName }}-armeabi-generic.apk"|g' update/${{ matrix.repoName }}.json
