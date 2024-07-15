@@ -2,7 +2,7 @@ name: XHYS
 
 on:
   schedule:
-    - cron: 59 */8 * * *
+    - cron: 0 8 * * *
   workflow_dispatch:
     inputs:
       rebuild:

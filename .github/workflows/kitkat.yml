@@ -2,7 +2,7 @@ name: kitkat
 # 代码来自xinyi1984
 on:
   schedule:
-    - cron: 0 0 * * *
+    - cron: 0 10 * * *
   workflow_dispatch:
     inputs:
       rebuild:
