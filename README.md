@@ -8,22 +8,17 @@
 ## 版本说明
 
 
-|   |     |           |     | 说明 |
-|-----|-------------|-----------|-----|----|
-| 电视  | leanback    |           |     |    |
-| 手机  | mobile      |           |     |    |
-| 爬蟲  | java        | python    |     |    |
-| 处理器 | armeabi_v7a | arm64_v8a | X86 |    |
-| 专版  | hisense     |           |     |    |
-|     |
-
-| 名稱  | 处理器     |   最低版本  |
-|------|---------|---------|
-| XHYSTV | armeabi | Android 4.X |
-| XHYS | V7a     | Android 5.X |
-| XHTV | V7a     | Android 5.0 |
-| XHTV | V8a     | 3：4     |
-|      | 1.33    | 4：3     |
+|                  |     |           |     | 说明 |
+|------------------|-------------|-----------|-----|----|
+| 电视               | leanback    |           |     |    |
+| 手机               | mobile      |           |     |    |
+| 爬蟲               | java        | python    |     |    |
+| 处理器              | armeabi_v7a | arm64_v8a | X86 |    |
+| 专版               | hisense     |           |     |    |
+| XHYSTV           |             |           |     | Android 4.X |
+| XHYS             |             |           |     | Android 5.X |
+| XHTV-armeabi_v7a |             |           |     | Android 5.X |
+| XHTV-arm64_v8a   |             |           |     | Android 6.X |
 
 ## Credits
 This repo relies on the following third-party projects:
