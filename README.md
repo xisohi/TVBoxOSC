@@ -13,7 +13,7 @@
 |        电视        |  leanback   |                                                  |
 |        手机        |   mobile    |                                                  |
 |        爬蟲        |    java<br/>python     | java = jar + js 爬蟲     <br/>python = jar + js + py 爬蟲 |
-|       处理器        | armeabi_v7a<br/>arm64_v8a<br/>X86 |                                                  |
+|       处理器        | armeabi_v7a<br/>arm64_v8a<br/>X86 | 第七代及以上的 ARM 处理器<br/>第8代、64位ARM处理器，目前手机大多数是此架构<br/>平板                                                 |
 |        专版        |   hisense   |                      海信电视专用                      |
 |      XHYSTV      |             |                   Android 4.X                    |
 |       XHYS       |             |                   Android 5.X                    |
