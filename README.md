@@ -8,13 +8,13 @@
 ## 版本说明
 
 
-|                  |             |           |     | 说明          |
-|------------------|-------------|-----------|-----|-------------|
-|        电视        | leanback    |           |     |             |
-|        手机        | mobile      |           |     |             |
-|        爬蟲        | java        | python    |     |             |
+|                  |             |           |     |     说明      |
+|------------------|:-----------:|:---------:|:---:|:-----------:|
+|        电视        |  leanback   |           |     |             |
+|        手机        |   mobile    |           |     |             |
+|        爬蟲        |    java     |  python   |     |             |
 |       处理器        | armeabi_v7a | arm64_v8a | X86 |             |
-|        专版        | hisense     |           |     |             |
+|        专版        |   hisense   |           |     |             |
 |      XHYSTV      |             |           |     | Android 4.X |
 |       XHYS       |             |           |     | Android 5.X |
 | XHTV-armeabi_v7a |             |           |     | Android 5.X |
