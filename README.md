@@ -12,7 +12,7 @@
 |------------------|:-----------:|:---------:|:---:|:------------------------------------------------:|
 |        电视        |  leanback   |           |     |                                                  |
 |        手机        |   mobile    |           |     |                                                  |
-|        爬蟲        |    java     |  python   |     | java = jar + js 爬蟲     python = jar + js + py 爬蟲 |
+|        爬蟲        |    java     |  python   |     | java = jar + js 爬蟲     <br/>python = jar + js + py 爬蟲 |
 |       处理器        | armeabi_v7a | arm64_v8a | X86 |                                                  |
 |        专版        |   hisense   |           |     |                      海信电视专用                      |
 |      XHYSTV      |             |           |     |                   Android 4.X                    |
