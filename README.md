@@ -5,6 +5,16 @@
 [![Download](https://img.shields.io/github/v/release/xisohi/TVBoxOSC?color=orange&logoColor=orange&label=Download&logo=DocuSign)](https://github.com/xisohi/TVBoxOSC/releases/latest) 
 [![Total](https://shields.io/github/downloads/xisohi/TVBoxOSC/total?logo=Bookmeter&label=Counts&logoColor=yellow&color=yellow)](https://github.com/xisohi/TVBoxOSC/releases)
 
+## 版本说明
+
+| 名稱  | 处理器     | 版本          |
+|------|---------|-------------|
+| XHYSTV | armeabi | Android 4.X |
+| XHYS | V7a     | Android 5.X |
+| XHTV | V7a     | Android 5.0 |
+| XHTV | V8a     | 3：4         |
+|      | 1.33    | 4：3         |
+
 ## Credits
 This repo relies on the following third-party projects:
 - [xisohi/TVBoxOSC](https://github.com/xisohi/TVBoxOSC)
