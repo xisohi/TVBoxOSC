@@ -7,13 +7,23 @@
 
 ## 版本说明
 
-| 名稱  | 处理器     | 版本          |
-|------|---------|-------------|
+
+| 电视    | 手机   | 爬蟲   | 处理器         | 专版 |
+|------------|------|------|-------------|----|
+| leanback | mobile    | java | arm64_v8a   |    |
+|  |     | python | armeabi_v7a |    |
+|  |  |   | X86         |    |
+|    | 15   | 播放超時 | 單位：秒        |    |
+|      | none | 請求標頭 | 格式：json     |    |
+|       | none | 點擊js | javascript  |    |
+
+| 名稱  | 处理器     |   最低版本  |
+|------|---------|---------|
 | XHYSTV | armeabi | Android 4.X |
 | XHYS | V7a     | Android 5.X |
 | XHTV | V7a     | Android 5.0 |
-| XHTV | V8a     | 3：4         |
-|      | 1.33    | 4：3         |
+| XHTV | V8a     | 3：4     |
+|      | 1.33    | 4：3     |
 
 ## Credits
 This repo relies on the following third-party projects:
