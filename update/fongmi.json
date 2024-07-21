@@ -1,5 +1,5 @@
 {
   "code": "243",
-  "name": "0718v2",
-  "desc": "1: Update Github.java\n2: # Conflicts:\n3: #	app/src/main/java/com/fongmi/android/tv/api/config/LiveConfig.java\n4: Fix py proguard\n5: Update build.gradle\n6: Add getProxyUrl for py\n7: Update spider.py\n8: Update build.gradle\n9: Fix bug\n10: Clean code\n11: Live support ads and rules\n12: Update spider.py\n13: Update Spider.java\n14: py add download dependence\n15: Update spider.py\n16: Add buffering event\n17: Update build.gradle\n18: Update spider.py\n19: Update build.gradle\n20: Fix surface bug\n21: Adjust edge\n22: Add destroy for py\n23: [mobile] support cast to video activity\n24: Support js py destory\n25: Update gradle\n26: Update build.gradle\n27: Update sdk\n"
+  "name": "0719v2",
+  "desc": "1: Update Github.java\n2: # Conflicts:\n3: #	build.gradle\n4: Update build.gradle\n5: Update okhttp to 5.0\n6: Clean code\n7: Update build.gradle\n8: Add sample\n9: Add timeZone param for live epg\n"
 }
