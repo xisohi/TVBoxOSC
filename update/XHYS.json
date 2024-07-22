@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 240720,
   "VersionName": "240720",
-  "UploadTime": "2024-07-20 19:59:32",
-  "ModifyContent": "1: 修复BUG\n",
+  "UploadTime": "2024-07-21 19:32:51",
+  "ModifyContent": "1: 解决搜索页面闪退报错 (#153)\n2: url修改之后没做判空\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYS/TVBox_XHYS-armeabi-generic.apk",
   "ApkSize": 27439,
-  "ApkMd5": "ca71f2344f00868f023e5c383e4782a9"
+  "ApkMd5": "d5b438cf90abb83658203ee32e420633"
 }
