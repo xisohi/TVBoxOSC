@@ -1,5 +1,5 @@
 {
-  "code": "243",
-  "name": "0719v2",
-  "desc": "1: Update Github.java\n2: # Conflicts:\n3: #	build.gradle\n4: Update build.gradle\n5: Update okhttp to 5.0\n6: Clean code\n7: Update build.gradle\n8: Add sample\n9: Add timeZone param for live epg\n"
+  "code": "244",
+  "name": "2.4.4",
+  "desc": "1: Fix bug\n2: Update build.gradle\n"
 }
