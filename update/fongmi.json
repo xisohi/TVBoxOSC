@@ -1,5 +1,5 @@
 {
   "code": "244",
-  "name": "2.4.4",
-  "desc": "1: Fix bug\n2: Update build.gradle\n"
+  "name": "0723v2",
+  "desc": "1: Update spider.py\n2: Update build.gradle\n3: Clean code\n4: Adjust max length for push url\n5: Update spider.py\n6: Update Crypto.java\n"
 }
