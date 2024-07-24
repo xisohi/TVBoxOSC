@@ -1,5 +1,5 @@
 {
-  "code": "243",
-  "name": "2.4.3",
-  "desc": "1: merge\n2: update\n3: merge dev\n4: Add buffering event\n5: Dev\n6: py add download dependence\n7: Max error count\n8: Fix surface bug\n9: Adjust edge\n10: [mobile] support cast to video activity\n11: Fix bug\n12: Add sync mode\n13: Add destroy for py\n14: Support js py destory\n15: Support media query\n16: Clean code\n17: Update build.gradle\n18: Add device sorter\n19: Fix yt list bug\n20: Fix X5 install\n21: Support next render\n"
+  "code": "244",
+  "name": "2.4.4",
+  "desc": "1: # Conflicts:\n2: #	app/src/main/java/com/fongmi/android/tv/api/config/LiveConfig.java\n3: merge\n4: merge dev\n5: Dev\n6: update\n7: build.gradle\n8: Update okhttp to 5.0\n9: Add timeZone param for live epg\n10: Add getProxyUrl for py\n11: Fix py proguard\n12: Clean code\n13: Add sample\n14: Add timeZone param for live epg\n15: Fix bug\n16: Live support ads and rules\n"
 }
