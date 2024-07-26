@@ -21,9 +21,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      # 设置Python解释器路径，这里使用了Linux的常见路径
-      PYTHON_PATH: /usr/bin/python3
     strategy:
       fail-fast: false
       matrix:
@@ -37,6 +34,22 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Set up Python
+        id: set-python
+        run: |
+          python_path=$(which python3)
+          echo "PYTHON_PATH=$python_path" >> $GITHUB_ENV
+
+      - name: Install Python Dependencies
+        run: |
+          ${{ env.PYTHON_PATH }} -m pip install --upgrade pip
+          ${{ env.PYTHON_PATH }} -m pip install lxml requests pycryptodome beautifulsoup4
+
+      - name: Run Python Script
+        run: |
+          # Replace 'my_script.py' with the path to your actual Python script
+          ${{ env.PYTHON_PATH }} my_script.py
 
       - name: Check New Commit
         run: |
@@ -99,23 +112,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-
-
-      - name: Set up Python
-        run: |
-          # 确保Python环境变量正确设置
-          echo "PYTHON_PATH=$(which python3)" >> $GITHUB_ENV
-
-      - name: Install Python Dependencies
-        run: |
-          # 使用Python的pip安装所需的包
-          python${{ env.PYTHON_PATH }} -m pip install --upgrade pip
-          python${{ env.PYTHON_PATH }} -m pip install lxml requests pycryptodome beautifulsoup4
-
-      - name: Run Python Script
-        run: |
-          # 运行Python脚本，这里需要替换为您的脚本名称
-          python${{ env.PYTHON_PATH }} my_script.py
 
       - name: Setup Gradle
         if: ${{ env.commit }}
