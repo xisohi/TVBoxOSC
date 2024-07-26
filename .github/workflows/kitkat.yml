@@ -21,6 +21,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # 设置Python解释器路径，这里使用了Linux的常见路径
+      PYTHON_PATH: /usr/bin/python3
     strategy:
       fail-fast: false
       matrix:
@@ -56,21 +59,6 @@ jobs:
           cd TVBoxOSC/media
           git checkout ${{ env.commit }}
           echo "tag=$(git log --date=format:'%y%m%d%H%M' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
-          
-          #- name: Extra Modify
-          #if: ${{ env.commit }}
-          #working-directory: TVBoxOSC
-          #run: |
-          #echo '修改VersionName'
-          #sed -i "/versionName/s#[0-9a-zA-Z_\.\'\"-]\+\$#\'${{ env.tag }}\'#" app/build.gradle
-          #sed -i "/android:text=/s#=\"#=\"${{ env.tag }}\\\\n\\\\n#" app/src/leanback/res/layout/activity_setting.xml
-          #sed -i "/android:text=/s#=\"#=\"${{ env.tag }}\\\\n\\\\n#" app/src/mobile/res/layout/fragment_setting.xml
-          #echo 'crosswalk源，防挂'
-          #if grep -q 'crosswalk' build.gradle; then
-          #sed -i "/crosswalk/a\        maven { url 'https://xisohi.github.io/crosswalk/releases/crosswalk/android/maven2' }" build.gradle
-          #else
-          #sed -i "/jitpack.io/a\        maven { url 'https://xisohi.github.io/crosswalk/releases/crosswalk/android/maven2' }" build.gradle
-        #fi
 
       - name: Compress Source Code
         if: ${{ env.commit }}
@@ -111,6 +99,23 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
+
+      - name: Set up Python
+        run: |
+          # 确保Python环境变量正确设置
+          echo "PYTHON_PATH=$(which python3)" >> $GITHUB_ENV
+
+      - name: Install Python Dependencies
+        run: |
+          # 使用Python的pip安装所需的包
+          python${{ env.PYTHON_PATH }} -m pip install --upgrade pip
+          python${{ env.PYTHON_PATH }} -m pip install lxml requests pycryptodome beautifulsoup4
+
+      - name: Run Python Script
+        run: |
+          # 运行Python脚本，这里需要替换为您的脚本名称
+          python${{ env.PYTHON_PATH }} my_script.py
 
       - name: Setup Gradle
         if: ${{ env.commit }}
