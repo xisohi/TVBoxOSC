@@ -1,5 +1,5 @@
 {
   "code": "244",
-  "name": "0723v2",
-  "desc": "1: Update spider.py\n2: Update build.gradle\n3: Clean code\n4: Adjust max length for push url\n5: Update spider.py\n6: Update Crypto.java\n"
+  "name": "0725",
+  "desc": "1: # Conflicts:\n2: #	app/build.gradle\n3: Clean code\n4: Create .gitignore\n5: Update build.gradle\n6: Clean package\n7: Use aar for library\n8: Update Proxy.java\n9: Update nanohttpd\n10: Add nanohttpd\n11: Update dlna\n12: Update strings.xml\n13: Update Traffic.java\n14: Update traffic\n"
 }
