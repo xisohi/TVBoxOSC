@@ -1,5 +1,5 @@
 {
   "code": "244",
   "name": "2.4.4",
-  "desc": "1: # Conflicts:\n2: #	app/src/main/java/com/fongmi/android/tv/api/config/LiveConfig.java\n3: merge\n4: merge dev\n5: Dev\n6: update\n7: build.gradle\n8: Update okhttp to 5.0\n9: Add timeZone param for live epg\n10: Add getProxyUrl for py\n11: Fix py proguard\n12: Clean code\n13: Add sample\n14: Add timeZone param for live epg\n15: Fix bug\n16: Live support ads and rules\n"
+  "desc": "1: 测试内置源\n"
 }
