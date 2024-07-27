@@ -1,5 +1,4 @@
-name: Test
-
+name: xhysupdate
 on:
   schedule:
     - cron: 59 */8 * * *
