@@ -17,7 +17,6 @@ on:
         description: 'arm64支持，不支持ijk解码'
         required: false
         type: boolean
-
   jobs:
     build:
       runs-on: ubuntu-latest
