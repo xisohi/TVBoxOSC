@@ -1,5 +1,5 @@
 {
-  "code": "244",
-  "name": "2.4.4",
-  "desc": "1: Update VodConfig.java\n"
+  "code": "245",
+  "name": "2.4.5",
+  "desc": "1: Merge\n2: merge dev\n3: Dev\n4: build.gradle\n5: Update spider.py\n6: add handleAudioFocus switch\n7: Clean code\n8: Create media3ext-release.aar\n9: Update Decoder.java\n10: Update dlna\n11: Update Vod.java\n12: Update build.gradle\n13: Update strings.xml\n14: Update Traffic\n15: Update strings.xml\n16: Adjust max length for push ur\n17: Update Decoder.java\n18: Update spider.py\n19: Update Crypto.java\n"
 }
