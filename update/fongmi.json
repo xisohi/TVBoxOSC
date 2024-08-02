@@ -1,5 +1,5 @@
 {
-  "code": "244",
-  "name": "0725",
-  "desc": "1: # Conflicts:\n2: #	app/build.gradle\n3: Clean code\n4: Create .gitignore\n5: Update build.gradle\n6: Clean package\n7: Use aar for library\n8: Update Proxy.java\n9: Update nanohttpd\n10: Add nanohttpd\n11: Update dlna\n12: Update strings.xml\n13: Update Traffic.java\n14: Update traffic\n"
+  "code": "246",
+  "name": "0801",
+  "desc": "1: # Conflicts:\n2: #	app/build.gradle\n3: #	app/src/main/java/com/fongmi/android/tv/api/config/LiveConfig.java\n4: #	build.gradle\n5: Update spider.py\n6: Update build.gradle\n7: Add cache userInfo\n8: Update Global.java\n9: Add proxy extractor\n10: Clean code\n11: Update build.gradle\n12: Update Module.java\n13: Remove cache\n14: Update build.gradle\n15: Update Global.java\n16: Update build.gradle\n17: Update Global.java\n18: Update demo\n19: Update build.gradle\n20: Support live spider\n21: Update media3ext-release.aar\n22: Update build.gradle\n23: Clean\n24: Add end check\n25: Update activity_video.xml\n26: Update media3ext-release.aar\n27: Update build.gradle\n28: Update spider.py\n29: Update build.gradle\n30: Optimize exo error check\n31: Create media3ext-release.aar\n32: Update .gitignore\n33: Fix build\n34: Clean code\n35: Update build.gradle\n36: Update dlna-dmr-release.aar\n"
 }
