@@ -1,5 +1,5 @@
 {
   "code": "246",
   "name": "2.4.6",
-  "desc": "1: merge dev\n2: Dev\n3: build.gradle\n4: Optimize loader\n5: Update Util.java\n6: Add notice\n7: Clean code\n8: Update drm\n9: Adjust exo error logic\n10: Update proguard-rules.pro\n11: Update media3ext-release.aar\n12: fix spider.py\n13: Support live spider\n14: Add cache userInfo\n15: Add proxy extractor\n16: Update Global.java\n17: Update Module.java\n18: Fix live bug\n19: Update pip install\n20: Clean\n21: Add end check\n"
+  "desc": "1: 更新源地址\n"
 }
