@@ -133,18 +133,18 @@ jobs:
         if: ${{ env.commit }}
         working-directory: TVBoxOSC/media
         run: |
-          #rm -rf apk/
+          rm -rf apk/
           mkdir -p apk/
-          for file in `find ~ -name "*leanback-java-arm64*.apk" -print`; do
-            mv "$file" apk/leanback-java-arm64_v8a.apk
+          for file in `find ~ \( -name "*python*.apk" -o -name "*java*.apk" \) -not -name "*x86*" -print`; do
+          #for file in `find ~ -name "*java*.apk" -not -name "*x86*" -print`; do
+            # 获取文件的基本名称
+            base=$(basename "$file")
+            # 在基本名称添加分支${{ matrix.branchName }}_
+            new_base="${{ matrix.branchName }}_$base"
+            # 移动并重命名文件
+            mv "$file" "apk/$new_base"
           done
-          for file in `find ~ -name "*leanback-java-armeabi*.apk" -print`; do
-            mv "$file" apk/leanback-java-armeabi_v7a.apk
-          done
-          for file in `find ~ -name "*mobile-java-arm64*.apk" -print`; do
-            mv "$file" apk/mobile-java-arm64_v8a.apk
-            #mv "$file" apk/mobile_java_${{ matrix.branchName }}_${{ env.tag }}.apk
-          done
+          mv source-${{ env.commitS }}.* apk/
 
       - name: Release Note
         if: ${{ env.commit }}
