@@ -50,7 +50,7 @@ jobs:
         run: |
           git clone https://github.com/androidx/media.git TVBoxOSC
           cd TVBoxOSC
-          git checkout -b main origin/main
+          #git checkout -b main origin/main
           cd /home/runner/work/TVBoxOSC/TVBoxOSC
           git clone ${{ env.upStream }} TVBoxOSC/media
           cd TVBoxOSC/media
@@ -59,7 +59,7 @@ jobs:
           
           #- name: Extra Modify
           #if: ${{ env.commit }}
-          #working-directory: TVBoxOSC
+          #working-directory: TVBoxOSC/midia
           #run: |
           #echo '修改VersionName'
           #sed -i "/versionName/s#[0-9a-zA-Z_\.\'\"-]\+\$#\'${{ env.tag }}\'#" app/build.gradle
@@ -114,7 +114,7 @@ jobs:
 
       - name: Setup Gradle
         if: ${{ env.commit }}
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Build With Gradle
         if: ${{ env.commit }}
@@ -124,9 +124,10 @@ jobs:
           #cp -r gradle.properties local.properties
           rm -rf app/src/armeabi_v7a/assets
           rm -rf app/src/arm64_v8a/assets
-          ./gradlew assembleleanbackJavaArm64_v8arelease --build-cache --parallel --daemon --warning-mode all
-          ./gradlew assembleleanbackJavaArmeabi_v7arelease --build-cache --parallel --daemon --warning-mode all
-          ./gradlew assemblemobileJavaArm64_v8arelease --build-cache --parallel --daemon --warning-mode all
+          ./gradlew assemblerelease --build-cache --parallel --daemon --warning-mode all
+          #./gradlew assembleleanbackJavaArm64_v8arelease --build-cache --parallel --daemon --warning-mode all
+          #./gradlew assembleleanbackJavaArmeabi_v7arelease --build-cache --parallel --daemon --warning-mode all
+          #./gradlew assemblemobileJavaArm64_v8arelease --build-cache --parallel --daemon --warning-mode all
 
       - name: Prepare App
         if: ${{ env.commit }}
