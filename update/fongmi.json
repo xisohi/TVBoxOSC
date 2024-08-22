@@ -1,5 +1,5 @@
 {
-  "code": "250",
-  "name": "2.5.0",
-  "desc": "1: 更新 build.gradle\n2: 更新 settings.gradle\n3: # Conflicts:\n4: #	app/build.gradle\n5: Update build.gradle\n6: Remove next\n7: Update Async.java\n8: Update build.gradle\n9: Clean code\n10: Update Constant.java\n11: Update build.gradle\n12: Revert to next\n13: Fix parse\n14: Update MediaSourceFactory.java\n15: Update ffmpeg\n16: Update build.gradle\n17: Update spider.py\n18: Update build.gradle\n19: Fix live bug\n20: Fix bug\n21: Add refresh live list api\n22: Update README.md\n23: Signed-off-by: FongMi <b8892778@gmail.com>\n24: Update build.gradle\n25: Fix play state\n26: Support refresh live list\n27: Init base jar\n28: Update nextlib\n29: Update proguard-rules.pro\n30: Use official nextlib\n31: Update build.gradle\n32: Add speed setting\n33: Update Spider.java\n34: Update build.gradle\n35: Update quickjs\n"
+  "code": "251",
+  "name": "2.5.1",
+  "desc": "1: Update build.gradle\n2: Fix bug\n3: Revert to ffmpeg\n4: Clean code\n5: Revert to next\n"
 }
