@@ -1,5 +1,5 @@
 {
   "code": "247",
   "name": "2.4.7",
-  "desc": "1: Update LiveActivity.java\n2: updater\n3: Merge dev\n4: merge dev\n5: build.gradle\n6: Fix parse\n7: Update spider.py\n8: Fix live bug\n9: Fix bug\n10: Clean code\n11: Dev\n12: Add refresh live list api\n13: Update README.md\n14: Fix play state\n15: Support refresh live list\n16: Update build.gradle\n17: Update VideoActivity\n18: Init base jar\n19: Update nextlib\n20: Use official nextlib\n21: Update Spider.java\n22: Update quickjs\n23: Update setLogo\n24: Update Go Start\n25: Optimize loader\n26: Update build.gradle\n27: Revert\n28: Optimize web parse\n"
+  "desc": "1: 更名\n"
 }
