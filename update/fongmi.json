@@ -1,5 +1,5 @@
 {
-  "code": "251",
-  "name": "2.5.1",
-  "desc": "1: Update build.gradle\n2: Fix bug\n3: Revert to ffmpeg\n4: Clean code\n5: Revert to next\n"
+  "code": "257",
+  "name": "2.5.7",
+  "desc": "1: Update build.gradle\n2: Preload logo\n3: Clean code\n4: Fix build\n5: Update youtube\n6: Add type 4 action\n7: Update build.gradle\n8: Fix subtitle bom bug\n9: Update spider action\n10: Update build.gradle\n11: Spider add action function\n"
 }
