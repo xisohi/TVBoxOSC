@@ -1,5 +1,5 @@
 {
-  "code": "247",
-  "name": "2.4.7",
-  "desc": "1: 更名\n"
+  "code": "250",
+  "name": "2.5.0",
+  "desc": "1: merge dev\n2: build.gradle\n3: Update youtube\n4: Clean code\n5: Add type 4 action\n6: Spider add action function\n7: Update Async.java\n8: Update Traffic.java\n9: Dev\n"
 }
