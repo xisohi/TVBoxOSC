@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 240825,
   "VersionName": "240825",
-  "UploadTime": "2024-08-25 21:49:32",
-  "ModifyContent": "1: 调整去广告规则\n",
+  "UploadTime": "2024-08-29 20:49:52",
+  "ModifyContent": "1: Update App.java\n2: # Conflicts:\n3: #	app/build.gradle\n4: #	app/src/main/java/com/github/tvbox/osc/base/App.java\n5: 支持海阔视界APP里的世界直播投屏，由于com.yanzhenjie.andserver不支持ksp，从ksp回退kapt\n6: 调整去广告规则\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYS/TVBox_XHYS-armeabi-generic.apk",
-  "ApkSize": 28236,
-  "ApkMd5": "eb3040885f025041782447beef38f064"
+  "ApkSize": 28307,
+  "ApkMd5": "addd151f88367dfcf6dafcb987ee1a78"
 }
