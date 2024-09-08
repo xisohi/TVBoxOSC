@@ -1,5 +1,5 @@
 {
-  "code": "257",
-  "name": "2.5.7",
-  "desc": "1: Update build.gradle\n2: Preload logo\n3: Clean code\n4: Fix build\n5: Update youtube\n6: Add type 4 action\n7: Update build.gradle\n8: Fix subtitle bom bug\n9: Update spider action\n10: Update build.gradle\n11: Spider add action function\n"
+  "code": "258",
+  "name": "0906",
+  "desc": "1: Update SubtitleDialog.java\n2: Delete SubtitleDialog.java\n3: Add pressed for subtitle action\n4: Fix subtitle action focus\n5: # Conflicts:\n6: #	app/src/leanback/java/com/fongmi/android/tv/ui/dialog/SubtitleDialog.java\n7: Clean code\n8: Update build.gradle\n9: Adjust subtitle dialog gravity\n10: Disable draggable for episode list mode\n11: Add long click for subtitle\n12: Keep bottom padding\n13: Fix bug\n14: Keep subtitle text size\n15: Optimize subtitle dialog\n16: Fix crash\n17: Fix clipboard crash\n18: [leanback] support subtitle move up and down\n19: [mobile] support subtitle move up and down\n20: Update JianPian\n"
 }
