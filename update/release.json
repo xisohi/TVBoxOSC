@@ -1,5 +1,5 @@
 {
   "code": "250",
   "name": "2.5.0",
-  "desc": "1: merge dev\n2: build.gradle\n3: Update youtube\n4: Clean code\n5: Add type 4 action\n6: Spider add action function\n7: Update Async.java\n8: Update Traffic.java\n9: Dev\n"
+  "desc": "1: Fix build\n2: Create zlive-release.aar\n3: Update zlive\n4: Revert zlive\n5: Dev\n"
 }
