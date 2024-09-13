@@ -1,5 +1,5 @@
 {
-  "code": "258",
-  "name": "0906",
-  "desc": "1: Update SubtitleDialog.java\n2: Delete SubtitleDialog.java\n3: Add pressed for subtitle action\n4: Fix subtitle action focus\n5: # Conflicts:\n6: #	app/src/leanback/java/com/fongmi/android/tv/ui/dialog/SubtitleDialog.java\n7: Clean code\n8: Update build.gradle\n9: Adjust subtitle dialog gravity\n10: Disable draggable for episode list mode\n11: Add long click for subtitle\n12: Keep bottom padding\n13: Fix bug\n14: Keep subtitle text size\n15: Optimize subtitle dialog\n16: Fix crash\n17: Fix clipboard crash\n18: [leanback] support subtitle move up and down\n19: [mobile] support subtitle move up and down\n20: Update JianPian\n"
+  "code": "260",
+  "name": "2.6.0",
+  "desc": "1: # Conflicts:\n2: #	app/build.gradle\n3: Fix live epg ui\n4: Create zlive-release.aar\n5: Update zlive\n6: Revert zlive\n7: Update build.gradle\n8: Fix bug\n"
 }
