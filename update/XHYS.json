@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 240111,
-  "VersionName": "240111",
-  "UploadTime": "2024-09-12 19:55:04",
-  "ModifyContent": "1: 修改背景获取方式\n",
+  "VersionCode": 240911,
+  "VersionName": "240911",
+  "UploadTime": "2024-09-12 20:12:52",
+  "ModifyContent": "1: 调整去广告规则\n2: 支持弹幕\n3: 修复已知BUG\n4: Update BaseActivity.java\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYS/TVBox_XHYS-armeabi-generic.apk",
   "ApkSize": 28448,
-  "ApkMd5": "b2c183d09e03af2720b76264118bbb59"
+  "ApkMd5": "3027f033ba9c8e9971ed5e27ccb1e5f7"
 }
