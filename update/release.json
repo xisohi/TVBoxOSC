@@ -1,5 +1,5 @@
 {
-  "code": "250",
-  "name": "2.5.0",
-  "desc": "1: Fix build\n2: Create zlive-release.aar\n3: Update zlive\n4: Revert zlive\n5: Dev\n"
+  "code": "253",
+  "name": "2.5.3",
+  "desc": "1: Update SubtitleDialog.java\n2: Delete SubtitleDialog.java\n3: # Conflicts:\n4: #	app/src/leanback/java/com/fongmi/android/tv/ui/dialog/SubtitleDialog.java\n5: Merge\n6: merge dev\n7: Dev\n8: build.gradle\n9: Clean code\n10: [leanback] support subtitle move up and down\n11: [mobile] support subtitle move up and down\n12: Disable draggable for episode list mode\n13: Fix live epg ui\n14: Fix bug\n15: Update showDisplayInfo\n16: Fix exo bug\n17: Fix crash\n18: Fix clipboard crash\n19: Player dialog\n20: update\n"
 }
