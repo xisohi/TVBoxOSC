@@ -1,5 +1,5 @@
 {
-  "code": "260",
-  "name": "2.6.0",
-  "desc": "1: # Conflicts:\n2: #	app/build.gradle\n3: Fix live epg ui\n4: Create zlive-release.aar\n5: Update zlive\n6: Revert zlive\n7: Update build.gradle\n8: Fix bug\n"
+  "code": "261",
+  "name": "2.6.1",
+  "desc": "1: Fix clipboard bug\n2: Update build.gradle\n3: Fix bug\n"
 }
