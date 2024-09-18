@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 240911,
   "VersionName": "240911",
-  "UploadTime": "2024-09-12 20:12:52",
-  "ModifyContent": "1: 调整去广告规则\n2: 支持弹幕\n3: 修复已知BUG\n4: Update BaseActivity.java\n",
+  "UploadTime": "2024-09-17 13:59:07",
+  "ModifyContent": "1: 修复片尾时间设置的问题\n2: 不同集数时间不同按正片设置片尾时间，会导致跳过片尾不正确\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYS/TVBox_XHYS-armeabi-generic.apk",
   "ApkSize": 28448,
-  "ApkMd5": "3027f033ba9c8e9971ed5e27ccb1e5f7"
+  "ApkMd5": "013307e912317f2fcbf462893d1efff1"
 }
