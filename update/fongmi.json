@@ -1,5 +1,5 @@
 {
   "code": "261",
   "name": "2.6.1",
-  "desc": "1: Fix clipboard bug\n2: Update build.gradle\n3: Fix bug\n"
+  "desc": "1: Fix bug\n2: Add stop event for session\n3: Fix crash\n4: Clean code\n"
 }
