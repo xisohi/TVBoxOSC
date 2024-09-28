@@ -2,8 +2,8 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 240927,
-  "VersionName": "240927",
+  "VersionCode": 240926,
+  "VersionName": "240926",
   "UploadTime": "2024-09-26 13:59:07",
   "ModifyContent": "1: 修复片尾时间设置的问题\n2: 不同集数时间不同按正片设置片尾时间，会导致跳过片尾不正确\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
