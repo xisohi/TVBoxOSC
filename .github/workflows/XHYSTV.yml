@@ -27,7 +27,7 @@ jobs:
         include:
           - userName: xisohi
             repoName: XHYSTV
-            branchName: main
+            branchName: mainA
 
     steps:
       - name: Checkout
