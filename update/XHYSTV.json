@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 1,
-  "VersionName": "1",
-  "UploadTime": "2024-09-29 18:15:47",
-  "ModifyContent": "1: 工\n2: Update build.gradle\n3: 回退代码\n4: 修复已知BUG\n5: Update Constants.java\n6: Update HomeActivity.java\n7: aai\n8: hy\n9: 多\n10: Delete ali.js\n11: 式\n12: # Conflicts:\n13: #	app/build.gradle\n14: #	quickjs/build.gradle\n15: Update build.gradle\n16: feat: optimize\n17: 更新 App.java\n18: Update Constants.java\n19: Revert "更改源地址"\n20: This reverts commit 60761b22f0022aef907e04b0f5b4c0bfac95da7e.\n21: 更改源地址\n22: Update build.gradle\n23: Update HomeActivity.java\n24: Revert "Update HomeActivity.java"\n25: This reverts commit 0189e8e9\n26: Update App.java\n27: aa\n28: Update build.gradle\n29: Update index.html\n30: 代码回退\n31: Update build.gradle\n32: 检查权限后更新\n33: 更新 build.gradle\n34: # Conflicts:\n35: #	app/build.gradle\n36: #	app/src/main/java/com/github/tvbox/osc/base/App.java\n37: update quickjs.\n38: Update HomeActivity.java\n39: Update build.gradle\n40: qq\n41: QQ\n42: 22\n43: Update LOG.java\n44: Update FileUtils.java\n45: Update build.gradle\n46: Update App.java\n47: Update build.gradle\n48: Update HomeActivity.java\n49: Update build.gradle\n50: Update HomeActivity.java\n51: Update build.gradle\n52: fix: Version update optimization\n53: bb\n54: fix: optimize home page version update\n55: update version\n56: feat: update version\n57: Update UpdateDialog.java\n58: update\n59: Update build.gradle\n60: 调整升级位置\n61: 调整版本号\n62: 调整更新按键位置\n63: 首页推荐：历史记录\n64: 设置首页推荐为历史记录\n65: 添加自动更新\n66: 调整自动更新位置\n",
+  "VersionCode": 5,
+  "VersionName": "5",
+  "UploadTime": "2024-09-29 19:49:39",
+  "ModifyContent": "1: Update build.gradle\n2: 列横冲直撞中西医结合f\n3: 更新背景\n4: 查查\n5: 新福克斯\n6: 更新设置\n7: 更新关于\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
-  "ApkSize": 15151,
-  "ApkMd5": "7abd5d6fa3d0d7bd9b27f62712fd8953"
+  "ApkSize": 15931,
+  "ApkMd5": "12469c362ca444776887d64e51776ded"
 }
