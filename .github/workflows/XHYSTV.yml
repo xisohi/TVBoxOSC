@@ -28,9 +28,6 @@ jobs:
           - userName: xisohi
             repoName: XHYSTV
             branchName: mainA
-          - userName: xisohi
-            repoName: XHYSTV
-            branchName: mainB
 
     steps:
       - name: Checkout
