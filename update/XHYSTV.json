@@ -2,7 +2,7 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 5,
+  "VersionCode": 6,
   "VersionName": "5",
   "UploadTime": "2024-09-29 19:49:39",
   "ModifyContent": "1: Update build.gradle\n2: 列横冲直撞中西医结合f\n3: 更新背景\n4: 查查\n5: 新福克斯\n6: 更新设置\n7: 更新关于\n",
