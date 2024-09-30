@@ -1,4 +1,4 @@
-name: Test
+name: XHYS
 
 on:
   schedule:
@@ -21,9 +21,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: xisohi
-            repoName: XHYSTV
-            branchName: main
           - userName: xisohi
             repoName: XHYS
             branchName: main
