@@ -22,10 +22,10 @@ jobs:
       matrix:
         include:
           - userName: xisohi
-            repoName: XHYS
+            repoName: XHYSTV
             branchName: main
           - userName: xisohi
-            repoName: XHYSTV
+            repoName: XHYS
             branchName: main
             java_ver: 17
     steps:
