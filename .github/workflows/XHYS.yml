@@ -24,6 +24,9 @@ jobs:
           - userName: xisohi
             repoName: XHYS
             branchName: main
+          - userName: xisohi
+            repoName: XHYSTV
+            branchName: main
             java_ver: 17
     steps:
       - name: Checkout
