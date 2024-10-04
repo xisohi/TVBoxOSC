@@ -1,5 +1,5 @@
 {
-  "code": "253",
-  "name": "2.5.3",
-  "desc": "1: 更换背景\n"
+  "code": "258",
+  "name": "2.5.8",
+  "desc": "1: # Conflicts:\n2: #	app/build.gradle\n3: Release\n4: Merge dev\n5: Dev\n6: build.gradle\n7: Fix bug\n8: Fix showDisplayInfo\n9: Update HistoryAdapter.java\n10: Clean code\n11: Fix bug\n12: Add stop event for session\n13: Fix crash\n14: Fix clipboard bug\n15: Fix bug\n16: 国庆快乐\n"
 }
