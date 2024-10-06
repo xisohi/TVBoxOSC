@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 241004,
   "VersionName": "241004",
-  "UploadTime": "2024-10-05 08:35:03",
-  "ModifyContent": "1: 更新提示显示为中文\n2: 修复已知BUG\n3: 修改更新服务地址\n4: 使用最新的源地址\n",
+  "UploadTime": "2024-10-06 12:38:20",
+  "ModifyContent": "1: Update app_bg.png\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
-  "ApkSize": 15930,
-  "ApkMd5": "3446b6b5c7d2ac3aba626a1694c2dec4"
+  "ApkSize": 16391,
+  "ApkMd5": "b56bd82cd7d25981ef5aba1e6492d10c"
 }
