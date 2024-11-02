@@ -70,13 +70,6 @@ CGTN阿语,https://0472.org/hls/cgtna.m3u8
 中国教育2台,http://[2409:8087:1a0b:df::4013]:80/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226425/index.m3u8
 中国教育4台,http://[2409:8087:1a0b:df::4020]:80/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221225783/index.m3u8
 
-CCTV-1,https://node1.olelive.com:6443/live/CCTV1HD/hls.m3u8
-CCTV-2,https://node1.olelive.com:6443/live/CCTV2HD/hls.m3u8
-CCTV-5+,https://node1.olelive.com:6443/live/CCTV5PHD/hls.m3u8
-CCTV-5,https://node1.olelive.com:6443/live/CCTV5HD/hls.m3u8
-CCTV-6,https://node1.olelive.com:6443/live/CCTV6HD/hls.m3u8
-CCTV-8,https://node1.olelive.com:6443/live/CCTV8HD/hls.m3u8
-CCTV-9,https://node1.olelive.com:6443/live/CCTV9HD/hls.m3u8
 CCTV-13,https://pi.0472.org/tv/fct.php?auth=2310201855
 CCTV-6,http://live.lcjly.cn/douyin/69416429589
 江苏卫视,http://live.lcjly.cn/douyin/417926571322
