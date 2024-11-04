@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 241004,
-  "VersionName": "241004",
-  "UploadTime": "2024-10-06 12:38:20",
-  "ModifyContent": "1: Update app_bg.png\n",
+  "VersionCode": 241104,
+  "VersionName": "241104",
+  "UploadTime": "2024-11-04 07:55:41",
+  "ModifyContent": "1: # Conflicts:\n2: #	app/build.gradle\n3: 本地代理支持转发header\n4: 支持cronet\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
-  "ApkSize": 16391,
-  "ApkMd5": "b56bd82cd7d25981ef5aba1e6492d10c"
+  "ApkSize": 18412,
+  "ApkMd5": "0841a6e081dd40782da143d25470037c"
 }
