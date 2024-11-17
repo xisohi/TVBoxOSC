@@ -71,6 +71,8 @@ CCTV-13,https://pi.0472.org/tv/fct.php?auth=2310201855
 CCTV-6,http://live.lcjly.cn/douyin/69416429589
 江苏卫视,http://live.lcjly.cn/douyin/417926571322
 大湾区卫视,http://live.lcjly.cn/douyin/603789803277
+消防阮老师,http://live.lcjly.cn/douyin/258725905730
+
 
 港澳台,#genre#
 凤凰卫视,http://58.144.154.93/qctv.fengshows.cn/live/0701pcc72.m3u8
