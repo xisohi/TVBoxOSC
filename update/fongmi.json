@@ -1,5 +1,5 @@
 {
   "code": "265",
-  "name": "1204",
-  "desc": "1: TrackNameProvider.java\n2: dsd\n3: Fix bug\n4: Update MediaSourceFactory.java\n5: Update build.gradle\n6: Clean code\n7: Add url-tvg detect for m3u\n8: Support multiple xml epg\n9: Update\n10: Fix epg mapping\n11: Support xtream code\n12: Fix bug\n13: Update build.gradle\n14: Add cookie detect for json parse\n15: Update gradle\n16: Update build.gradle\n17: Fix track bug\n18: Sniffer add rtmp\n19: Fix bug\n20: Update track\n21: Update build.gradle\n"
+  "name": "1207",
+  "desc": "1: Update build.gradle\n2: Fix bug\n3: Clean code\n"
 }
