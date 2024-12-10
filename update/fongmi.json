@@ -1,5 +1,5 @@
 {
   "code": "265",
-  "name": "1207",
-  "desc": "1: Update build.gradle\n2: Fix bug\n3: Clean code\n"
+  "name": "1208v2",
+  "desc": "1: # Conflicts:\n2: #	app/src/main/java/com/fongmi/android/tv/api/config/LiveConfig.java\n3: Fix line break\n4: Support xtream vod\n5: Update build.gradle\n6: Update README.md\n7: Fix xtream bug\n8: Update build.gradle\n9: Fix bug\n10: Clean code\n11: Fix xtream detect\n12: Fix bug\n"
 }
