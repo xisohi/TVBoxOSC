@@ -1,5 +1,5 @@
 {
-  "code": "265",
-  "name": "1208v2",
-  "desc": "1: # Conflicts:\n2: #	app/src/main/java/com/fongmi/android/tv/api/config/LiveConfig.java\n3: Fix line break\n4: Support xtream vod\n5: Update build.gradle\n6: Update README.md\n7: Fix xtream bug\n8: Update build.gradle\n9: Fix bug\n10: Clean code\n11: Fix xtream detect\n12: Fix bug\n"
+  "code": "266",
+  "name": "1212",
+  "desc": "1: Update ExoUtil.java\n2: # Conflicts:\n3: #	app/src/main/java/com/fongmi/android/tv/player/exo/ExoUtil.java\n4: Update build.gradle\n5: Fix bug\n6: Support live config keep\n7: Optimize hls play\n"
 }
