@@ -60,8 +60,6 @@ jobs:
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: |
-          #删除xisohi-XHlive的release目录
-          rm -rf release
           zip -q -x ".git/*" -x  ".github/*" -r source-${{ env.commitS }}.zip .
           #tar -cJf source-${{ env.commitS }}.tar.xz --exclude=.git --exclude=.github *
 
