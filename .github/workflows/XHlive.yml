@@ -63,7 +63,7 @@ jobs:
           signingConfig='ICAgICAgICAgICAgaWYgKHByb2plY3QuaGFzUHJvcGVydHkoIlJFTEVBU0VfU1RPUkVfRklMRSIpKSB7XAogICAgICAgICAgICAgICAgc2lnbmluZ0NvbmZpZyBzaWduaW5nQ29uZmlncy5teUNvbmZpZ1wKICAgICAgICAgICAgfVwK'
           signingConfigs="$(echo "$signingConfigs" |base64 -d )"
           signingConfig="$(echo "$signingConfig" |base64 -d )"
-          sed -i -e "/defaultConfig {/i\\$signingConfigs " -e "/debug {/a\\$signingConfig " -e "/release {/a\\$signingConfig " app/build.gradle
+          sed -i -e "/defaultConfig {/i\\$signingConfigs " -e "/debug {/a\\$signingConfig " -e "/release {/a\\$signingConfig " app/build.gradle.kts
           cp -f ${{ github.workspace }}/.github/workflows/TVBoxOSC.jks app/TVBoxOSC.jks
           sed -i '$a\RELEASE_STORE_FILE=./TVBoxOSC.jks'     ./gradle.properties
           sed -i '$a\RELEASE_KEY_ALIAS=TVBoxOSC'            ./gradle.properties
@@ -158,27 +158,7 @@ jobs:
           artifacts: |
             TVBoxOSC/apk/*.apk
             TVBoxOSC/apk/sourceCode-${{ env.commitS }}.*
-      - name: Download Telegram Bot API Binary
-        if: ${{ env.commit }}
-        uses: actions/download-artifact@v4
-        with:
-          name: telegram-bot-api-binary
-          path: TVBoxOSC
-      - name: Post To Telegram
-        if: ${{ env.commit }}
-        working-directory: TVBoxOSC
-        env:
-          CHAT_ID: -1001734684817
-          TELEGRAM_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: |
-          if [ -n "${{ secrets.BOT_TOKEN }}" ]; then
-            sed -i -e '1s/\[\(.*\)\].*/#\1/' -e 's#\([&"\/]\)#\\\1#g' apk/${{ matrix.userName }}-Release.log
-            mv -f apk/${{ matrix.userName }}-Release.log caption.txt
-            chmod +x telegram-bot-api-binary
-            ./telegram-bot-api-binary --api-id=21724 --api-hash=3e0cb5efcd52300aec5994fdfc5bdc16 --local 2>&1 > /dev/null &
-            mv ../.github/scripts/upload.py ./
-            python upload.py
-          fi
+
       - name: Push to master
         if: ${{ env.commit }}
         run: |
