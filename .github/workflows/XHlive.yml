@@ -60,8 +60,8 @@ jobs:
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: |
-          zip -q -x ".git/*" -x  ".github/*" -r source-${{ env.commitS }}.zip .
-          #tar -cJf source-${{ env.commitS }}.tar.xz --exclude=.git --exclude=.github *
+          #zip -q -x ".git/*" -x  ".github/*" -r sourceCode-${{ env.commitS }}.zip .
+          tar -cJf sourceCode-${{ env.commitS }}.tar.xz --exclude=.git --exclude=.github *
 
       - name: Release Apk Sign
         if: ${{ env.commit }}
