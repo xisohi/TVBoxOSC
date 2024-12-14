@@ -24,17 +24,12 @@ jobs:
           - userName: xisohi
             repoName: XHlive
             branchName: main
+            java_ver: 21
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: set up JDK 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-          cache: 'gradle'
       - name: Check New Commit
         run: |
           upStream="https://github.com/${{  matrix.userName }}/${{ matrix.repoName }}"
@@ -75,7 +70,11 @@ jobs:
           sed -i '$a\RELEASE_KEY_ALIAS=TVBoxOSC'            ./gradle.properties
           sed -i '$a\RELEASE_STORE_PASSWORD=xh8621989'       ./gradle.properties
           sed -i '$a\RELEASE_KEY_PASSWORD=xh8621989'         ./gradle.properties
-
+      - uses: actions/setup-java@v4
+        if: ${{ matrix.java_ver }}
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java_ver }}
       - uses: gradle/actions/setup-gradle@v4
         if: ${{ env.commit }}
       - name: Build With Gradle
