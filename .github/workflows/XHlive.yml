@@ -49,16 +49,6 @@ jobs:
           cd TVBoxOSC
           git checkout ${{ env.commit }}
           echo "tag=$(git log --date=format:'%y%m%d%H%M' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
-      - name: Extra Modify
-        if: ${{ env.commit }}
-        working-directory: TVBoxOSC
-        run: |
-          echo 'crosswalk源，防挂'
-          if grep -q 'crosswalk' build.gradle; then
-            sed -i "/crosswalk/a\        maven { url 'https://o0halflife0o.github.io/crosswalk/releases/crosswalk/android/maven2' }" build.gradle
-          else
-            sed -i "/jitpack.io/a\        maven { url 'https://o0halflife0o.github.io/crosswalk/releases/crosswalk/android/maven2' }" build.gradle
-          fi
       - name: Compress Source Code
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
