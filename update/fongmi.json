@@ -1,5 +1,5 @@
 {
-  "code": "266",
-  "name": "1213v3",
-  "desc": "1: Update build.gradle\n2: Fix bug\n3: jar support md5 url\n4: Optimize live spider\n"
+  "code": "268",
+  "name": "2.6.8",
+  "desc": "1: Update build.gradle\n2: Fix bug\n3: Fix tvbus\n4: Add desc for playerContent\n5: Fix bug\n6: Fix part\n"
 }
