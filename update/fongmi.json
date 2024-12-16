@@ -1,5 +1,5 @@
 {
   "code": "268",
   "name": "2.6.8",
-  "desc": "1: Update build.gradle\n2: Fix bug\n3: Fix tvbus\n4: Add desc for playerContent\n5: Fix bug\n6: Fix part\n"
+  "desc": "1: # Conflicts:\n2: #	app/build.gradle\n3: #	app/src/main/java/com/fongmi/android/tv/player/exo/TrackNameProvider.java\n4: Add iamf decoder\n"
 }
