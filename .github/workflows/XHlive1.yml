@@ -28,10 +28,10 @@ jobs:
             repoName: XHlive
             branchName: main
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 获取所有历史记录，以便比较
+          fetch-depth: 0
 
       - name: Check New Commit
         run: |
