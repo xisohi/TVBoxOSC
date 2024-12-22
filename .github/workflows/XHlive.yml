@@ -31,17 +31,18 @@ jobs:
         with:
           fetch-depth: 0 # 获取所有历史记录，以便比较
 
-      - name: Check for new commits
-        id: check_commits
+      - name: Check New Commit
         run: |
-          LAST_SUCCESSFUL_BUILD_SHA=$(curl -s "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/runs?branch=${{ github.ref }}&event=schedule" | jq -r '.workflow_runs[0].head_sha')
-          CURRENT_HEAD_SHA=$(git rev-parse HEAD)
-          if [ "$CURRENT_HEAD_SHA" == "$LAST_SUCCESSFUL_BUILD_SHA" ]; then
-            echo "No new commits since last successful build."
+          upStream="https://github.com/${{  matrix.userName }}/${{ matrix.repoName }}"
+          echo "upStream=$upStream" >> $GITHUB_ENV
+          commit=$(curl -sL "https://api.github.com/repos/${{  matrix.userName }}/${{ matrix.repoName }}/commits/${{ matrix.branchName }}" | jq -r '.sha')
+          if [ $? -ne 0 ]; then
+            echo "Failed to get commit from API"
             exit 1
-          else
-            echo "New commits found."
-            echo "last_commit=$LAST_SUCCESSFUL_BUILD_SHA" >> $GITHUB_ENV
+          fi
+          if [ -z "$commit" ] || ! grep -q "$commit" README.md; then
+            echo "commit=$commit" >> $GITHUB_ENV
+            echo "commitS=${commit:0:7}" >> $GITHUB_ENV
           fi
 
       - name: Generate Tag Name
