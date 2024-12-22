@@ -1,8 +1,8 @@
 name: XHlive
-# 代码来自xinyi1984
+
 on:
   schedule:
-    - cron: 0 6 * * *
+    - cron: '0 6 * * *' # 每天凌晨6点（UTC时间）执行，相当于北京时间下午2点
   workflow_dispatch:
     inputs:
       rebuild:
@@ -14,6 +14,9 @@ on:
         required: false
         type: boolean
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,43 +27,72 @@ jobs:
           - userName: xisohi
             repoName: XHlive
             branchName: main
+            java_ver: 21
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          repository: ${{ matrix.userName }}/${{ matrix.repoName }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: ${{ matrix.repoName }}
 
-      - name: Check New Commit
-        run: |
-          upStream="https://github.com/${{  matrix.userName }}/${{ matrix.repoName }}"
-          echo "upStream=$upStream" >> $GITHUB_ENV
-          commit=$(curl -sL "https://api.github.com/repos/${{  matrix.userName }}/${{ matrix.repoName }}/commits/${{ matrix.branchName }}" | jq -r '.sha')
-          if [ $? -ne 0 ]; then
-            echo "Failed to get commit from API"
-            exit 1
-          fi
-          if [ -z "$commit" ] || ! grep -q "$commit" README.md; then
-            echo "commit=$commit" >> $GITHUB_ENV
-            echo "commitS=${commit:0:7}" >> $GITHUB_ENV
-          fi
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ matrix.java_ver }}
+          distribution: 'temurin'
+          cache: 'gradle'
 
-      - name: Generate Tag Name
-        id: generate_tag
+      - name: Copy keystore
         run: |
-          TAG_NAME="v$(date +'%y.%m.%d.%H')"
-          echo "tag_name=$TAG_NAME" >> $GITHUB_ENV
-          VERSION_CODE="$(date +'%y%m%d%H')"
-          echo "version_code=$VERSION_CODE" >> $GITHUB_ENV
+          cp -f ${{ github.workspace }}/.github/workflows/TVBoxOSC.jks ${{ matrix.repoName }}/TVBoxOSC.jks
 
-      - name: Push to master
-        if: ${{ env.commit }}
+      - name: Configure signing
         run: |
-          sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
-          sed -i "s/\"version_code\": [0-9]*/\"version_code\": ${{ env.version_code }}/" update/${{ matrix.branchName }}.json
-          sed -i "s/\"version_name\": \"v[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*\"/\"version_name\": \"${{ env.tag_name }}\"/" update/${{ matrix.branchName }}.json
-          git add --all
-          git commit -m "${{ env.commit }}"
-          git push -u -f origin master
-          #continue-on-error: true 是因为 git commit 会失败也是预期的，这个步骤可以忽略失败。加上这个命令就可以在这个步骤失败的时候，不会影响其他步骤
-        continue-on-error: true
+          echo "RELEASE_STORE_FILE=./TVBoxOSC.jks" >> ${{ matrix.repoName }}/gradle.properties
+          echo "RELEASE_KEY_ALIAS=TVBoxOSC" >> ${{ matrix.repoName }}/gradle.properties
+          echo "RELEASE_STORE_PASSWORD=xh8621989" >> ${{ matrix.repoName }}/gradle.properties
+          echo "RELEASE_KEY_PASSWORD=xh8621989" >> ${{ matrix.repoName }}/gradle.properties
+
+      - name: Run build with Gradle wrapper
+        working-directory: ${{ matrix.repoName }}
+        run: |
+          ./gradlew clean && ./gradlew assembleRelease
+
+      - name: Sign app APK
+        uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: ${{ matrix.repoName }}/app/build/outputs/apk/release
+          alias: TVBoxOSC
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          keyStorePassword: xh8621989
+          keyPassword: xh8621989
+
+      - name: Set Asset Name
+        id: set_asset_name
+        run: |
+          VERSION_WITHOUT_V=$(echo '${{ github.ref_name }}' | sed 's/^v//')
+          echo "asset_name=XHlive.${VERSION_WITHOUT_V}.apk" >> $GITHUB_ENV
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+          body_path: ${{ matrix.repoName }}/history.md
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ steps.sign_app.outputs.signedReleaseFile }}
+          asset_name: ${{ env.asset_name }}
+          asset_content_type: application/vnd.android.package-archive
