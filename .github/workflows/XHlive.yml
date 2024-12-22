@@ -53,30 +53,9 @@ jobs:
           VERSION_CODE="$(date +'%y%m%d%H')"
           echo "version_code=$VERSION_CODE" >> $GITHUB_ENV
 
-      - name: Release Apk Sign
-        if: ${{ env.commit }}
-        working-directory: TVBoxOSC
-        run: |
-          signingConfigs='ICAgIHNpZ25pbmdDb25maWdzIHtcCiAgICAgICAgaWYgKHByb2plY3QuaGFzUHJvcGVydHkoIlJFTEVBU0VfU1RPUkVfRklMRSIpKSB7XAogICAgICAgICAgICBteUNvbmZpZyB7XAogICAgICAgICAgICAgICAgc3RvcmVGaWxlIGZpbGUoUkVMRUFTRV9TVE9SRV9GSUxFKVwKICAgICAgICAgICAgICAgIHN0b3JlUGFzc3dvcmQgUkVMRUFTRV9TVE9SRV9QQVNTV09SRFwKICAgICAgICAgICAgICAgIGtleUFsaWFzIFJFTEVBU0VfS0VZX0FMSUFTXAogICAgICAgICAgICAgICAga2V5UGFzc3dvcmQgUkVMRUFTRV9LRVlfUEFTU1dPUkRcCiAgICAgICAgICAgICAgICB2MVNpZ25pbmdFbmFibGVkIHRydWVcCiAgICAgICAgICAgICAgICB2MlNpZ25pbmdFbmFibGVkIHRydWVcCiAgICAgICAgICAgICAgICBlbmFibGVWM1NpZ25pbmcgPSB0cnVlXAogICAgICAgICAgICAgICAgZW5hYmxlVjRTaWduaW5nID0gdHJ1ZVwKICAgICAgICAgICAgfVwKICAgICAgICB9XAogICAgfVwKXA=='
-          signingConfig='ICAgICAgICAgICAgaWYgKHByb2plY3QuaGFzUHJvcGVydHkoIlJFTEVBU0VfU1RPUkVfRklMRSIpKSB7XAogICAgICAgICAgICAgICAgc2lnbmluZ0NvbmZpZyBzaWduaW5nQ29uZmlncy5teUNvbmZpZ1wKICAgICAgICAgICAgfVwK'
-          signingConfigs="$(echo "$signingConfigs" |base64 -d )"
-          signingConfig="$(echo "$signingConfig" |base64 -d )"
-          sed -i -e "/defaultConfig {/i\\$signingConfigs " -e "/debug {/a\\$signingConfig " -e "/release {/a\\$signingConfig " app/build.gradle
-          cp -f ${{ github.workspace }}/.github/workflows/TVBoxOSC.jks app/TVBoxOSC.jks
-          sed -i '$a\RELEASE_STORE_FILE=./TVBoxOSC.jks'     ./gradle.properties
-          sed -i '$a\RELEASE_KEY_ALIAS=TVBoxOSC'            ./gradle.properties
-          sed -i '$a\RELEASE_STORE_PASSWORD=xh8621989'       ./gradle.properties
-          sed -i '$a\RELEASE_KEY_PASSWORD=xh8621989'         ./gradle.properties
-
       - name: Push to master
         if: ${{ env.commit }}
         run: |
-          rm -rf TVBoxOSC
-          sed -i '/url =/d' ./.git/config
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
-          git pull --rebase
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
           sed -i "s/\"version_code\": [0-9]*/\"version_code\": ${{ env.version_code }}/" update/${{ matrix.branchName }}.json
           sed -i "s/\"version_name\": \"v[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*\"/\"version_name\": \"${{ env.tag_name }}\"/" update/${{ matrix.branchName }}.json
