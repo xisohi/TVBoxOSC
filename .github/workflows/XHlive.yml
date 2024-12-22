@@ -1,4 +1,4 @@
-name: XHYS
+name: XHlive
 
 on:
   schedule:
@@ -62,8 +62,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add version.json
-          git commit -m "Update version.json"
+          git add update/${{ matrix.repoName }}.json
+          git commit -m "Update update/${{ matrix.repoName }}.json"
           git push
 
       - name: Get the new commit SHA after version update
