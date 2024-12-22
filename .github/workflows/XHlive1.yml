@@ -1,8 +1,8 @@
-name: XHlive1
-
+name: XHLIVE1
+# 代码来自xinyi1984
 on:
   schedule:
-    - cron: '0 6 * * *' # 每天凌晨6点（UTC时间）执行，相当于北京时间上午14点
+    - cron: 0 6 * * *
   workflow_dispatch:
     inputs:
       rebuild:
@@ -13,9 +13,10 @@ on:
         description: '构建后不提交发布新版'
         required: false
         type: boolean
-
-permissions:
-  contents: write
+      testOption:
+        description: 'arm64支持，不支持ijk解码'
+        required: false
+        type: boolean
 
 jobs:
   build:
@@ -27,6 +28,7 @@ jobs:
           - userName: xisohi
             repoName: XHlive
             branchName: main
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
