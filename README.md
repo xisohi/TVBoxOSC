@@ -28,5 +28,3 @@ This repo relies on the following third-party projects:
 - [xisohi/XHTV/tree/fongmi](https://github.com/xisohi/XHTV/tree/fongmi) (Updated: a4cc3d9635b7a53f732be8f8305e72d2434471b3)
 - [xisohi/XHTV/tree/release](https://github.com/xisohi/XHTV/tree/release) (Updated: 045b09458e92550e24d3fdbf857966b45dbd75ac)
 - [xisohi/XHTV/tree/kitkat](https://github.com/xisohi/XHTV/tree/kitkat) (Updated: 173644e483a4df89e0be04e68c9abd85fd0ddb79)
-- [xisohi/XHlive/tree/main](https://github.com/xisohi/XHlive/tree/main) (Updated: bb3f9d4b2b782f84c27247a56b97362d9ac94ea0)
-- [xisohi/XHlive/tree/kitkat](https://github.com/xisohi/XHlive/tree/kitkat) (Updated: 173644e483a4df89e0be04e68c9abd85fd0ddb79)
