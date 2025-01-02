@@ -1,5 +1,5 @@
 {
-  "code": "271",
-  "name": "1228v2",
-  "desc": "1: 修复已知BUG\n2: Update build.gradle\n3: Fix crash\n4: Clean code\n5: Fix build\n6: Fix sort\n7: Add sort for restore\n8: Add device info\n9: Rewrite backup and restore - part 7\n10: Rewrite backup and restore - part 6\n11: Fix crash\n12: Rewrite backup and restore - part 5\n13: Rewrite backup and restore - part 4\n14: Rewrite backup and restore - part 3\n15: Rewrite backup and restore - part 2\n16: Rewrite backup and restore - part 1\n17: Add drm check\n18: Update SubtitleDialog.java\n19: Update build.gradle\n20: Fix subtitle position\n21: # Conflicts:\n22: #	app/src/main/java/com/fongmi/android/tv/ui/dialog/SubtitleDialog.java\n23: Fix crash\n24: Add quickSearch param\n25: Fix xml epg extract\n26: Optimize subtitle position\n27: Update tvbus\n"
+  "code": "272",
+  "name": "2.7.2",
+  "desc": "1: Fix bug\n2: Update build.gradle\n"
 }
