@@ -2,8 +2,8 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 250104,
-  "VersionName": "250104",
+  "VersionCode": 250105,
+  "VersionName": "250105",
   "UploadTime": "2025-01-05 15:34:55",
   "ModifyContent": "1: 修复已知BUG\n2: 使用最新的源地址\n",
   "DownloadUrl": "https://ghgo.xyz/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
