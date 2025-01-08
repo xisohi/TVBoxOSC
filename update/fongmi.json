@@ -1,5 +1,5 @@
 {
-  "code": "268",
-  "name": "2.6.8",
-  "desc": "1: # Conflicts:\n2: #	app/build.gradle\n3: #	app/src/main/java/com/fongmi/android/tv/player/exo/TrackNameProvider.java\n4: Add iamf decoder\n"
+  "code": "272",
+  "name": "2.7.2",
+  "desc": "1: Fix bug\n2: Update build.gradle\n"
 }
