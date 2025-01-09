@@ -1,8 +1,8 @@
-name: fongmi
-# 代码来自xinyi1984
+name: lkys
+
 on:
   schedule:
-    - cron: 0 2 * * *
+    - cron: 0 4 * * *
   workflow_dispatch:
     inputs:
       rebuild:
@@ -27,14 +27,13 @@ jobs:
         include:
           - userName: xisohi
             repoName: XHTV
-            branchName: fongmi
+            branchName: lkys
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
 #      - name: Check New Commit
 #        run: |
 #          upStream=https://github.com/${{ matrix.userName }}/${{ matrix.repoName }}
@@ -43,8 +42,7 @@ jobs:
 #          if ! grep -q "$commit" README.md || [ "${{ inputs.rebuild }}" == "true" ]; then
 #            echo "commit=$commit" >> $GITHUB_ENV
 #            echo "commitS=${commit:0:7}" >> $GITHUB_ENV
-#          fi
-
+#         fi
       - name: Check New Commit
         run: |
           upStream="https://github.com/${{  matrix.userName }}/${{ matrix.repoName }}"
@@ -58,31 +56,32 @@ jobs:
             echo "commit=$commit" >> $GITHUB_ENV
             echo "commitS=${commit:0:7}" >> $GITHUB_ENV
           fi
-
       - name: Checkout Source Code
         if: ${{ env.commit }}
         run: |
-          git clone https://github.com/androidx/media.git TVBoxOSC
+          git clone ${{ env.upStream }} TVBoxOSC
           cd TVBoxOSC
-          #git checkout -b main origin/main
-          cd /home/runner/work/TVBoxOSC/TVBoxOSC
-          git clone ${{ env.upStream }} TVBoxOSC/media
-          cd TVBoxOSC/media
           git checkout ${{ env.commit }}
           echo "tag=$(git log --date=format:'%y%m%d%H%M' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
-          
+
+      - name: Extra Modify
+        if: ${{ env.commit }}
+        working-directory: TVBoxOSC
+        run: |
+          if [[ "${{ matrix.userName }}" == "xisohi" ]]; then
+            sed -i 's/TeamNewPipe/teamnewpipe/g' app/build.gradle
+          fi
+
       - name: Compress Source Code
         if: ${{ env.commit }}
-        working-directory: TVBoxOSC/media
+        working-directory: TVBoxOSC
         run: |
-          #删除xisohi-XHTV的release目录
-          rm -rf release
-          zip -q -x ".git/*" -x  ".github/*" -r source-${{ env.commitS }}.zip .
-          #tar -cJf source-${{ env.commitS }}.tar.xz --exclude=.git --exclude=.github *
+          #zip -q -x ".git/*" -x  ".github/*" -r source-${{ env.commitS }}.zip .
+          tar -cJf source-${{ env.commitS }}.tar.xz --exclude=.git --exclude=.github *
 
       - name: Option For Test
         if: ${{ inputs.testOption }}
-        working-directory: TVBoxOSC/media
+        working-directory: TVBoxOSC
         run: |
           #添加arm64支持，不支持ijk解码
           sed -i "/armeabi-v7a[\'\"]$/s#\$#, 'arm64-v8a'#" app/build.gradle
@@ -90,7 +89,7 @@ jobs:
 
       - name: Release Apk Sign
         if: ${{ env.commit }}
-        working-directory: TVBoxOSC/media
+        working-directory: TVBoxOSC
         run: |
           signingConfigs='ICAgIHNpZ25pbmdDb25maWdzIHtcCiAgICAgICAgaWYgKHByb2plY3QuaGFzUHJvcGVydHkoIlJFTEVBU0VfU1RPUkVfRklMRSIpKSB7XAogICAgICAgICAgICBteUNvbmZpZyB7XAogICAgICAgICAgICAgICAgc3RvcmVGaWxlIGZpbGUoUkVMRUFTRV9TVE9SRV9GSUxFKVwKICAgICAgICAgICAgICAgIHN0b3JlUGFzc3dvcmQgUkVMRUFTRV9TVE9SRV9QQVNTV09SRFwKICAgICAgICAgICAgICAgIGtleUFsaWFzIFJFTEVBU0VfS0VZX0FMSUFTXAogICAgICAgICAgICAgICAga2V5UGFzc3dvcmQgUkVMRUFTRV9LRVlfUEFTU1dPUkRcCiAgICAgICAgICAgICAgICB2MVNpZ25pbmdFbmFibGVkIHRydWVcCiAgICAgICAgICAgICAgICB2MlNpZ25pbmdFbmFibGVkIHRydWVcCiAgICAgICAgICAgICAgICBlbmFibGVWM1NpZ25pbmcgPSB0cnVlXAogICAgICAgICAgICAgICAgZW5hYmxlVjRTaWduaW5nID0gdHJ1ZVwKICAgICAgICAgICAgfVwKICAgICAgICB9XAogICAgfVwKXA=='
           signingConfig='ICAgICAgICAgICAgaWYgKHByb2plY3QuaGFzUHJvcGVydHkoIlJFTEVBU0VfU1RPUkVfRklMRSIpKSB7XAogICAgICAgICAgICAgICAgc2lnbmluZ0NvbmZpZyBzaWduaW5nQ29uZmlncy5teUNvbmZpZ1wKICAgICAgICAgICAgfVwK'
@@ -103,68 +102,54 @@ jobs:
           sed -i '$a\RELEASE_STORE_PASSWORD=xh8621989'       ./gradle.properties
           sed -i '$a\RELEASE_KEY_PASSWORD=xh8621989'         ./gradle.properties
 
-      # Set up JDK 17 解决androidx/room/RoomProcessor has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0  61需要java-version: 17
-      - name: set up JDK 17
-        if: ${{ env.commit }}
-        uses: actions/setup-java@v4
+      - name: Setup Java
+        if: ${{ env.commit && (matrix.userName == 'xisohi') }}
+        uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
 
       - name: Setup Gradle
         if: ${{ env.commit }}
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/gradle-build-action@v2
 
       - name: Build With Gradle
         if: ${{ env.commit }}
-        working-directory: TVBoxOSC/media
+        working-directory: TVBoxOSC
         run: |
-          chmod +x /home/runner/work/TVBoxOSC/TVBoxOSC/TVBoxOSC/media/gradlew
-          #cp -r gradle.properties local.properties
-          rm -rf app/src/armeabi_v7a/assets
-          rm -rf app/src/arm64_v8a/assets
+          chmod +x gradlew
           ./gradlew assemblerelease --build-cache --parallel --daemon --warning-mode all
-          #./gradlew assembleleanbackJavaArm64_v8arelease --build-cache --parallel --daemon --warning-mode all
-          #./gradlew assembleleanbackJavaArmeabi_v7arelease --build-cache --parallel --daemon --warning-mode all
-          #./gradlew assemblemobileJavaArm64_v8arelease --build-cache --parallel --daemon --warning-mode all
 
       - name: Prepare App
         if: ${{ env.commit }}
-        working-directory: TVBoxOSC/media
+        working-directory: TVBoxOSC
         run: |
           rm -rf apk/
           mkdir -p apk/
-          for file in `find ~ \( -name "*python*.apk" -o -name "*java*.apk" \) -not -name "*x86*" -print`; do
-          #for file in `find ~ -name "*java*.apk" -not -name "*x86*" -print`; do
-            # 获取文件的基本名称
-            base=$(basename "$file")
-            # 在基本名称添加分支${{ matrix.branchName }}_
-            new_base="${{ matrix.branchName }}_$base"
-            # 移动并重命名文件
-            mv "$file" "apk/$new_base"
+          find ~ -type d -iname "release" -print0 | while IFS= read -r -d '' dir; do
+            find "$dir" -type f -name "*.apk" -exec sh -c 'cp "$1" "apk/${1##*/}"' sh {} \;
           done
-          mv source-${{ env.commitS }}.* apk/
 
       - name: Release Note
         if: ${{ env.commit }}
-        working-directory: TVBoxOSC/media
+        working-directory: TVBoxOSC
         run: |
           lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
           export LESSCHARSET=utf-8
-          echo -e "Credit: [${{ matrix.userName }}/${{ matrix.repoName }}/${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.userName }}-Release.log
+          echo -e "Credit: [${{ matrix.userName }}/${{ matrix.repoName }}/${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.repoName }}-Release.log
           if [ "${{ env.commit }}" == "${lastCommit}" ]; then
-            git log --pretty=format:%B ${{ env.commitS }} -1 |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> apk/${{ matrix.userName }}-Release.log
+            git log --pretty=format:%B ${{ env.commitS }} -1 |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> apk/${{ matrix.repoName }}-Release.log
           else
-            git log --pretty=format:%B ${{ env.commitS }}...${lastCommit:0:7} |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> apk/${{ matrix.userName }}-Release.log
+            git log --pretty=format:%B ${{ env.commitS }}...${lastCommit:0:7} |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> apk/${{ matrix.repoName }}-Release.log
           fi
 
       - name: Build Upgrade log
         if: ${{ env.commit }}
-        working-directory: TVBoxOSC/media
+        working-directory: TVBoxOSC
         run: |
           lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
           export LESSCHARSET=utf-8
-          echo -e "Credit: [${{ matrix.userName }}/${{ matrix.repoName }}/${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.branchName }}.log
+          echo -e "Credit: [${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.branchName }}.log
           if [ "${{ env.commit }}" == "${lastCommit}" ]; then
             git log --pretty=format:%B ${{ env.commitS }} -1 |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- > apk/${{ matrix.branchName }}.log
           else
@@ -173,24 +158,37 @@ jobs:
 
       - name: Build Upgrade content
         if: ${{ env.commit }}
-        working-directory: TVBoxOSC/media
+        working-directory: TVBoxOSC
         run: |
           echo "versionCode=$(grep -oP 'versionCode \K\d+' app/build.gradle)" >> $GITHUB_ENV
           echo "versionName=$(grep -oP 'versionName \"\K[^\"]+' app/build.gradle)" >> $GITHUB_ENV
           echo "desc=$(awk 'BEGIN{ORS="\\\\n"}{print NR ": " $0}' apk/${{ matrix.branchName }}.log)" >> $GITHUB_ENV
 
+      - name: Upload App To Artifact
+        uses: actions/upload-artifact@v3
+        if: ${{ env.commit }}
+        with:
+          name: ${{ matrix.userName }}-${{ matrix.repoName }}
+          path: |
+            TVBoxOSC/apk/*
+
+      - name: Whether Or Not to Publish
+        if: ${{ inputs.donotpublish && env.commit }}
+        run: |
+          echo "commit=" >> $GITHUB_ENV
+
       - name: Release and Upload Assets
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@main
         if: ${{ env.commit }}
         with:
           name: ${{ matrix.repoName }}
           tag: ${{ matrix.branchName }}
-          bodyFile: TVBoxOSC/media/apk/${{ matrix.userName }}-Release.log
+          bodyFile: TVBoxOSC/apk/${{ matrix.repoName }}-Release.log
           allowUpdates: true
           removeArtifacts: true
           artifacts: |
-            TVBoxOSC/media/apk/*.apk
-            TVBoxOSC/media/source-${{ env.commitS }}.*  
+            TVBoxOSC/apk/*.apk
+            TVBoxOSC/source-${{ env.commitS }}.*
 
       - name: Push to master
         if: ${{ env.commit }}
@@ -199,14 +197,13 @@ jobs:
           sed -i '/url =/d' ./.git/config
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}"
           git pull --rebase
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
           sed -i 's/"code": "[a-zA-Z0-9]*"/"code": "${{ env.versionCode }}"/' update/${{ matrix.branchName }}.json
           sed -i 's/"name": "[^"]*"/"name": "${{ env.versionName }}"/' update/${{ matrix.branchName }}.json
           sed -i 's|"desc": ".*"|"desc": "${{ env.desc }}"|g' update/${{ matrix.branchName }}.json
+          sed -i "s/update at .*/update at $(date '+%Y-%m-%d %H:%M:%S')/" README.md
           git add --all
           git commit -m "${{ env.commit }}"
           git push -u -f origin master
-          #continue-on-error: true 是因为 git commit 会失败也是预期的，这个步骤可以忽略失败。加上这个命令就可以在这个步骤失败的时候，不会影响其他步骤
-        continue-on-error: true
