@@ -1,4 +1,4 @@
-电视直播,#genre#//IPV6(fanmingming)
+电视直播,#genre#
 CCTV1,http://[2409:8087:74d9:21::6]:80/270000001128/9900000001/index.m3u8
 CCTV2,http://[2409:8087:74d9:21::6]:80/270000001128/9900000502/index.m3u8
 CCTV3,http://[2409:8087:74d9:21::6]:80/270000001128/9900000003/index.m3u8
@@ -153,7 +153,7 @@ CGTN新闻,http://120.210.193.151:8006/120000001001/wlds:8080/ysten-business/liv
 深圳卫视,http://120.210.193.151:8006/120000001001/wlds:8080/ysten-business/live/shenzhenstv/1.m3u8
 江西卫视,http://120.210.193.151:8006/120000001001/wlds:8080/ysten-business/live/jiangxistv/1.m3u8
 贵州卫视,http://120.210.193.151:8006/120000001001/wlds:8080/ysten-business/live/pltv-guizhoustv/1.m3u8
-吉林卫视,http://120.210.193.151:8006/120000001002/XMTjlwshd/index.m3u8	
+吉林卫视,http://120.210.193.151:8006/120000001002/XMTjlwshd/index.m3u8
 广东卫视,http://120.210.193.151:8006/120000001001/wlds:8080/ysten-business/live/guangdongstv/1.m3u8
 湖北卫视,http://120.210.193.151:8006/120000001001/wlds:8080/ysten-business/live/pltv-hubeistv/1.m3u8
 河北卫视,http://120.210.193.151:8006/120000001001/wlds:8080/ysten-business/live/pltv-hebeistv/1.m3u8
