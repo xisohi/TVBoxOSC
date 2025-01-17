@@ -1,5 +1,5 @@
 {
   "code": "285",
   "name": "2.8.5",
-  "desc": "1: 修复打包错误\n2: Update build.gradle\n3: Fix crash\n4: Clean code\n5: Update ua\n6: Fix bug\n7: Update build.gradle\n8: Optimize position\n9: Update error ui\n10: Update build.gradle\n11: Fix crash\n12: Fix bug\n13: Update sample\n14: Update build.gradle\n15: Use replaceAll for catchup replace\n16: Add catchup replace\n17: Fix catchup\n18: # Conflicts:\n19: #	app/src/main/java/com/fongmi/android/tv/player/exo/TrackNameProvider.java\n20: Fix yt device\n21: Fix reset bug\n22: Fix bug\n23: Fix eventbus crash\n24: Optimize pip\n25: Add filter long click event\n26: Fix bug\n27: Optimize player\n28: Update drm\n"
+  "desc": "1: Add seek when casted\n2: Update dlna\n"
 }
