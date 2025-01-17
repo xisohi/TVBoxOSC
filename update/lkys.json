@@ -1,5 +1,5 @@
 {
-  "code": "274",
-  "name": "2.7.4",
-  "desc": ""
+  "code": "285",
+  "name": "2.8.5",
+  "desc": "1: Update build.gradle\n2: Fix crash\n3: Clean code\n4: Update ua\n5: Fix bug\n6: Update build.gradle\n7: Optimize position\n8: Update error ui\n9: Update build.gradle\n10: Fix crash\n11: Fix bug\n12: Update sample\n13: Update build.gradle\n14: Use replaceAll for catchup replace\n15: Add catchup replace\n16: Fix catchup\n17: Fix yt device\n"
 }
