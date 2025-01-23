@@ -1,5 +1,5 @@
 {
-  "code": "285",
-  "name": "2.8.5",
-  "desc": "1: Add seek when casted\n2: Update dlna\n"
+  "code": "289",
+  "name": "2.8.9",
+  "desc": "1: Update build.gradle\n2: Remove avif\n3: Add waiting msg\n4: Update .gitignore\n5: Update\n6: Update build.gradle\n7: Fix crash\n8: Update dlna - part 2\n9: Update dlna - part 1\n"
 }
