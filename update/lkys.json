@@ -1,5 +1,5 @@
 {
-  "code": "285",
-  "name": "2.8.5",
-  "desc": "1: Update build.gradle\n2: Fix crash\n3: Clean code\n4: Update ua\n5: Fix bug\n6: Update build.gradle\n7: Optimize position\n8: Update error ui\n9: Update build.gradle\n10: Fix crash\n11: Fix bug\n12: Update sample\n13: Update build.gradle\n14: Use replaceAll for catchup replace\n15: Add catchup replace\n16: Fix catchup\n17: Fix yt device\n"
+  "code": "290",
+  "name": "2.9.0",
+  "desc": "1: Fix yt\n2: Update build.gradle\n3: Clean code\n4: Remove avif\n5: Add waiting msg\n6: Update .gitignore\n7: Update\n8: Update build.gradle\n9: Use nextrender\n10: Fix crash\n11: Update dlna - part 2\n12: Update dlna - part 1\n13: Add seek when casted\n14: Update dlna\n"
 }
