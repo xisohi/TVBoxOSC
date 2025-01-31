@@ -165,7 +165,7 @@ jobs:
           echo "desc=$(awk 'BEGIN{ORS="\\\\n"}{print NR ": " $0}' apk/${{ matrix.branchName }}.log)" >> $GITHUB_ENV
 
       - name: Upload App To Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ env.commit }}
         with:
           name: ${{ matrix.userName }}-${{ matrix.repoName }}
