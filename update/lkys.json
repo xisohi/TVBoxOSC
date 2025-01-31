@@ -1,5 +1,5 @@
 {
-  "code": "290",
-  "name": "2.9.0",
-  "desc": "1: Fix yt\n2: Update build.gradle\n3: Clean code\n4: Remove avif\n5: Add waiting msg\n6: Update .gitignore\n7: Update\n8: Update build.gradle\n9: Use nextrender\n10: Fix crash\n11: Update dlna - part 2\n12: Update dlna - part 1\n13: Add seek when casted\n14: Update dlna\n"
+  "code": "298",
+  "name": "2.9.8",
+  "desc": "1: Fix bug\n2: Remove conscrypt beacuse gitea\n3: Update build.gradle\n4: Optimize decode\n5: Revert\n6: Clean code\n7: Add Conscrypt\n8: Add back buffer\n9: Optimize\n10: Update TrackNameProvider.java\n11: Update build.gradle\n12: Optimize soft decode\n13: Use jbr-21\n14: Update gradle\n15: Update build.gradle\n16: Update\n17: Update proguard-rules.pro\n18: Update\n"
 }
