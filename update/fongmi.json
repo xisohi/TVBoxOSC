@@ -1,5 +1,5 @@
 {
-  "code": "290",
-  "name": "2.9.0",
-  "desc": "1: 修改122行代码为：setResizeMode不知对不对\n2: # Conflicts:\n3: #	app/src/main/java/com/fongmi/android/tv/player/Players.java\n4: Fix yt\n5: Update build.gradle\n6: Clean code\n"
+  "code": "300",
+  "name": "3.0.0",
+  "desc": "1: 修复已知BUG\n2: # Conflicts:\n3: #	app/build.gradle\n4: #	app/src/main/java/com/fongmi/android/tv/player/exo/ExoUtil.java\n5: Update build.gradle\n6: Add audio prefer\n7: Fix user info bug\n8: Add av3a\n9: Fix bug\n10: Remove conscrypt beacuse gitea\n11: Optimize decode\n12: Revert\n13: Clean code\n14: Add Conscrypt\n15: Add back buffer\n16: Optimize\n17: Update TrackNameProvider.java\n18: Update build.gradle\n19: Optimize soft decode\n20: Use jbr-21\n21: Update gradle\n22: Update build.gradle\n23: Update\n24: Update proguard-rules.pro\n25: Update\n"
 }
