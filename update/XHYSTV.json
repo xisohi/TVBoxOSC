@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 250125,
-  "VersionName": "250125",
-  "UploadTime": "2025-01-31 20:21:26",
-  "ModifyContent": "1: 修复已知BUG\n",
+  "VersionCode": 250126,
+  "VersionName": "250126",
+  "UploadTime": "2025-01-31 20:48:13",
+  "ModifyContent": "1: 修复xwalk地址为gitee\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
   "ApkSize": 18413,
-  "ApkMd5": "8dfae33ede9f782c031437cbd8fa3b60"
+  "ApkMd5": "82b1a2e48a3b37525d9e6d77f05a611b"
 }
