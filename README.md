@@ -23,7 +23,7 @@
 ## Credits
 This repo relies on the following third-party projects:
 - [xisohi/TVBoxOSC](https://github.com/xisohi/TVBoxOSC)
-- [xisohi/XHYSTV](https://github.com/xisohi/XHYSTV) (Updated: c081a255d532132d02fe19678612830513e72a39)
+- [xisohi/XHYSTV](https://github.com/xisohi/XHYSTV) (Updated: 0199eaa639af4dda6138b50dd6f2d614b6f8fc8e)
 - [xisohi/XHYS](https://github.com/xisohi/XHYS) (Updated: df652c231af9d022d8a3fb93e4d5139b1d8325d7)
 - [xisohi/XHTV/tree/lkys](https://github.com/xisohi/XHTV/tree/lkys) (Updated: 81a9f1c9d7ef9c821a450be0e8322194d5d3955b)
 - [xisohi/XHTV/tree/fongmi](https://github.com/xisohi/XHTV/tree/fongmi) (Updated: c8d8cf681c596f41fdc84f444f525ef6ad224aae)
