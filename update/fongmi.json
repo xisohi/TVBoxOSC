@@ -1,5 +1,5 @@
 {
-  "code": "300",
-  "name": "3.0.0",
-  "desc": "1: Fix bug and clean code\n"
+  "code": "304",
+  "name": "3.0.4",
+  "desc": "1: 修复已知BUG\n2: # Conflicts:\n3: #	ijkplayer/build.gradle\n4: Update build.gradle\n5: Revert\n6: Fix bug\n7: Fix\n8: Clean code\n9: Create similarity.js\n10: Clean\n11: Add chno\n12: Clean drpy\n13: Use byte[]\n14: Update quickjs and remove bb\n15: Update gson\n16: Add conscrypt back again\n17: Update build.gradle\n18: Clean code\n"
 }
