@@ -94,7 +94,7 @@ jobs:
         if: ${{ env.commit }}
         with:
           name: ${{ matrix.repoName }}
-          tag: ${{ matrix.branchName }}
+          tag: ${{ matrix.repoName }}-${{ matrix.branchName }}
           bodyFile: TVBoxOSC/nodejs/dist/${{ matrix.userName }}-Release.log
           allowUpdates: true
           removeArtifacts: true
