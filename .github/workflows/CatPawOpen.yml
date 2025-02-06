@@ -107,18 +107,6 @@ jobs:
           body_path: TVBoxOSC/nodejs/dist/${{ matrix.userName }}-Release.log
           token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 进行身份验证
 
-      - name: Release and Upload Assets
-        uses: ncipollo/release-action@v1
-        if: ${{ env.commit }}
-        with:
-          name: ${{ matrix.repoName }}
-          tag: ${{ matrix.repoName }}-${{ matrix.branchName }}
-          bodyFile: TVBoxOSC/nodejs/dist/${{ matrix.userName }}-Release.log
-          allowUpdates: true
-          removeArtifacts: true
-          artifacts: |
-            /TVBoxOSC/nodejs/dist/cat.zip  # 指定上传 cat.zip 文件
-
       - name: Push to master
         if: ${{ env.commit }}
         run: |
