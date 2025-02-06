@@ -91,6 +91,7 @@ jobs:
       - name: Check artifacts
         if: ${{ env.commit }}
         run: |
+          echo "Current working directory: $(pwd)"
           if [ ! -f "TVBoxOSC/nodejs/dist/cat.zip" ]; then
             echo "Error: cat.zip does not exist"
             exit 1
