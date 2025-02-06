@@ -97,6 +97,16 @@ jobs:
             exit 1
           fi
 
+      - name: Create Release and Upload Artifact
+        if: ${{ env.commit }}
+        uses: softprops/action-gh-release@v1
+        with:
+          files: /TVBoxOSC/nodejs/dist/cat.zip  # 指定上传 cat.zip 文件
+          tag_name: ${{ matrix.repoName }}-${{ matrix.branchName }}
+          name: ${{ matrix.repoName }}
+          bodyFile: TVBoxOSC/nodejs/dist/${{ matrix.userName }}-Release.log
+          token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 进行身份验证
+
       - name: Release and Upload Assets
         uses: ncipollo/release-action@v1
         if: ${{ env.commit }}
@@ -107,7 +117,7 @@ jobs:
           allowUpdates: true
           removeArtifacts: true
           artifacts: |
-            /home/runner/work/TVBoxOSC/TVBoxOSC/TVBoxOSC/nodejs/dist/cat.zip  # 指定上传 cat.zip 文件
+            /TVBoxOSC/nodejs/dist/cat.zip  # 指定上传 cat.zip 文件
 
       - name: Push to master
         if: ${{ env.commit }}
@@ -124,3 +134,4 @@ jobs:
           git push -u -f origin master
           #continue-on-error: true 是因为 git commit 会失败也是预期的，这个步骤可以忽略失败。加上这个命令就可以在这个步骤失败的时候，不会影响其他步骤
         continue-on-error: true
+
