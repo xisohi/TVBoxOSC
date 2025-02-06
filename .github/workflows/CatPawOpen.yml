@@ -68,6 +68,7 @@ jobs:
           
       - name: Archive dist
         if: ${{ env.commit }}
+        working-directory: TVBoxOSC/nodejs
         run: |
           cd dist
           zip -r cat.zip .  # 打包 nodejs/dist 文件夹内的所有文件
