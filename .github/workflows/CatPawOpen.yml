@@ -72,7 +72,7 @@ jobs:
         run: |
           cd dist
           zip -r cat.zip .  # 打包 nodejs/dist 文件夹内的所有文件
-          mv cat.zip ../  # 将生成的 cat.zip 移动到 nodejs 目录下
+#          mv cat.zip ../  # 将生成的 cat.zip 移动到 nodejs 目录下
 
       - name: Release Note
         if: ${{ env.commit }}
@@ -99,7 +99,7 @@ jobs:
           allowUpdates: true
           removeArtifacts: true
           artifacts: |
-            TVBoxOSC/cat.zip  # 指定上传 cat.zip 文件
+            TVBoxOSC/nodejs/dist/cat.zip  # 指定上传 cat.zip 文件
             TVBoxOSC/nodejs/source-${{ env.commitS }}.*  
 
       - name: Push to master
