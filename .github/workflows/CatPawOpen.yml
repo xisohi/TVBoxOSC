@@ -13,10 +13,6 @@ on:
         description: '构建后不提交发布新版'
         required: false
         type: boolean
-      testOption:
-        description: 'arm64支持，不支持ijk解码'
-        required: false
-        type: boolean
 
 jobs:
   build:
@@ -73,7 +69,7 @@ jobs:
       - name: Archive dist
         if: ${{ env.commit }}
         run: |
-          cd nodejs/dist
+          cd dist
           zip -r cat.zip .  # 打包 nodejs/dist 文件夹内的所有文件
           mv cat.zip ../  # 将生成的 cat.zip 移动到 nodejs 目录下
 
