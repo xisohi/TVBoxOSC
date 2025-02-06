@@ -99,7 +99,7 @@ jobs:
           allowUpdates: true
           removeArtifacts: true
           artifacts: |
-            TVBoxOSC/nodejs/cat.zip  # 指定上传 cat.zip 文件
+            TVBoxOSC/cat.zip  # 指定上传 cat.zip 文件
             TVBoxOSC/nodejs/source-${{ env.commitS }}.*  
 
       - name: Push to master
