@@ -101,10 +101,10 @@ jobs:
         if: ${{ env.commit }}
         uses: softprops/action-gh-release@v1
         with:
-          files: /TVBoxOSC/nodejs/dist/cat.zip  # 指定上传 cat.zip 文件
+          files: TVBoxOSC/nodejs/dist/cat.zip  # 指定上传 cat.zip 文件
           tag_name: ${{ matrix.repoName }}-${{ matrix.branchName }}
           name: ${{ matrix.repoName }}
-          bodyFile: TVBoxOSC/nodejs/dist/${{ matrix.userName }}-Release.log
+          body_path: TVBoxOSC/nodejs/dist/${{ matrix.userName }}-Release.log
           token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 进行身份验证
 
       - name: Release and Upload Assets
