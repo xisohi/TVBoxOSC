@@ -33,9 +33,9 @@ jobs:
 
       - name: Check New Commit
         run: |
-          upStream="https://github.com/${{  matrix.userName }}/${{ matrix.repoName }}"
+          upStream="https://github.com/${{ matrix.userName }}/${{ matrix.repoName }}"
           echo "upStream=$upStream" >> $GITHUB_ENV
-          commit=$(curl -sL "https://api.github.com/repos/${{  matrix.userName }}/${{ matrix.repoName }}/commits/${{ matrix.branchName }}" | jq -r '.sha')
+          commit=$(curl -sL "https://api.github.com/repos/${{ matrix.userName }}/${{ matrix.repoName }}/commits/${{ matrix.branchName }}" | jq -r '.sha')
           if [ $? -ne 0 ]; then
             echo "Failed to get commit from API"
             exit 1
@@ -65,14 +65,14 @@ jobs:
         run: |
           npm i
           npm run build
-          
+
       - name: Archive dist
         if: ${{ env.commit }}
         working-directory: TVBoxOSC/nodejs
         run: |
           cd dist
           zip -r cat.zip .  # 打包 nodejs/dist 文件夹内的所有文件
-#          mv cat.zip ../  # 将生成的 cat.zip 移动到 nodejs 目录下
+          mv cat.zip ../  # 将生成的 cat.zip 移动到 nodejs 目录下
 
       - name: Release Note
         if: ${{ env.commit }}
@@ -87,7 +87,17 @@ jobs:
             git log --pretty=format:%B ${{ env.commitS }}...${lastCommit:0:7} |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> dist/${{ matrix.userName }}-Release.log
           fi
 
-
+      - name: Check artifacts
+        if: ${{ env.commit }}
+        run: |
+          if [ ! -f "TVBoxOSC/nodejs/dist/cat.zip" ]; then
+            echo "Error: cat.zip does not exist"
+            exit 1
+          fi
+          if [ ! -f "TVBoxOSC/nodejs/source-87cc59e.*" ]; then
+            echo "Error: source-87cc59e.* does not exist"
+            exit 1
+          fi
 
       - name: Release and Upload Assets
         uses: ncipollo/release-action@v1
