@@ -1,0 +1,131 @@
+name: CatPawOpen
+# 猫源
+on:
+  schedule:
+    - cron: 0 2 * * *
+  workflow_dispatch:
+    inputs:
+      rebuild:
+        description: '忽略构建记录以重新构建'
+        required: false
+        type: boolean
+      donotpublish:
+        description: '构建后不提交发布新版'
+        required: false
+        type: boolean
+      testOption:
+        description: 'arm64支持，不支持ijk解码'
+        required: false
+        type: boolean
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - userName: xisohi
+            repoName: CatPawOpen
+            branchName: main
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check New Commit
+        run: |
+          upStream="https://github.com/${{  matrix.userName }}/${{ matrix.repoName }}"
+          echo "upStream=$upStream" >> $GITHUB_ENV
+          commit=$(curl -sL "https://api.github.com/repos/${{  matrix.userName }}/${{ matrix.repoName }}/commits/${{ matrix.branchName }}" | jq -r '.sha')
+          if [ $? -ne 0 ]; then
+            echo "Failed to get commit from API"
+            exit 1
+          fi
+          if [ -z "$commit" ] || ! grep -q "$commit" README.md; then
+            echo "commit=$commit" >> $GITHUB_ENV
+            echo "commitS=${commit:0:7}" >> $GITHUB_ENV
+          fi
+
+      - name: Checkout Source Code
+        if: ${{ env.commit }}
+        run: |
+          git clone ${{ env.upStream }} TVBoxOSC
+          cd TVBoxOSC
+          git checkout ${{ env.commit }}
+          echo "tag=$(git log --date=format:'%Y%m%d-%H%M' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
+
+      - name: Set up Node.js
+        if: ${{ env.commit }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.17.1
+
+      - name: Run npm build
+        if: ${{ env.commit }}
+        working-directory: nodejs
+        run: |
+          npm i
+          npm run build
+
+      - name: Archive dist
+        if: ${{ env.commit }}
+        run: |
+          cd nodejs/dist
+          zip -r cat.zip .  # 打包 nodejs/dist 文件夹内的所有文件
+          mv cat.zip ../  # 将生成的 cat.zip 移动到 nodejs 目录下
+
+      - name: Build Upgrade log
+        if: ${{ env.commit }}
+        working-directory: TVBoxOSC/nodejs
+        run: |
+          lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
+          export LESSCHARSET=utf-8
+          echo -e "Credit: [${{ matrix.userName }}/${{ matrix.repoName }}/${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.branchName }}.log
+          if [ "${{ env.commit }}" == "${lastCommit}" ]; then
+            git log --pretty=format:%B ${{ env.commitS }} -1 |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- > apk/${{ matrix.branchName }}.log
+          else
+            git log --pretty=format:%B ${{ env.commitS }}...${lastCommit:0:7} |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- > apk/${{ matrix.branchName }}.log
+          fi
+
+      - name: Build Upgrade content
+        if: ${{ env.commit }}
+        working-directory: TVBoxOSC/nodejs
+        run: |
+          echo "versionCode=$(grep -oP 'versionCode \K\d+' app/build.gradle)" >> $GITHUB_ENV
+          echo "versionName=$(grep -oP 'versionName \"\K[^\"]+' app/build.gradle)" >> $GITHUB_ENV
+          echo "desc=$(awk 'BEGIN{ORS="\\\\n"}{print NR ": " $0}' apk/${{ matrix.branchName }}.log)" >> $GITHUB_ENV
+
+      - name: Release and Upload Assets
+        uses: ncipollo/release-action@v1
+        if: ${{ env.commit }}
+        with:
+          name: ${{ matrix.repoName }}
+          tag: ${{ matrix.branchName }}
+          bodyFile: TVBoxOSC/media/apk/${{ matrix.userName }}-Release.log
+          allowUpdates: true
+          removeArtifacts: true
+          artifacts: |
+            TVBoxOSC/media/apk/*.apk
+            TVBoxOSC/media/source-${{ env.commitS }}.*  
+
+      - name: Push to master
+        if: ${{ env.commit }}
+        run: |
+          rm -rf TVBoxOSC
+          sed -i '/url =/d' ./.git/config
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git pull --rebase
+          sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
+          sed -i 's/"code": "[a-zA-Z0-9]*"/"code": "${{ env.versionCode }}"/' update/${{ matrix.branchName }}.json
+          sed -i 's/"name": "[^"]*"/"name": "${{ env.versionName }}"/' update/${{ matrix.branchName }}.json
+          sed -i 's|"desc": ".*"|"desc": "${{ env.desc }}"|g' update/${{ matrix.branchName }}.json
+          git add --all
+          git commit -m "${{ env.commit }}"
+          git push -u -f origin master
+          #continue-on-error: true 是因为 git commit 会失败也是预期的，这个步骤可以忽略失败。加上这个命令就可以在这个步骤失败的时候，不会影响其他步骤
+        continue-on-error: true
