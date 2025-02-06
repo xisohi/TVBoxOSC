@@ -65,11 +65,11 @@ jobs:
 
       - name: Run npm build
         if: ${{ env.commit }}
-        working-directory: nodejs
+        working-directory: TVBoxOSC/nodejs
         run: |
           npm i
           npm run build
-
+          
       - name: Archive dist
         if: ${{ env.commit }}
         run: |
@@ -77,26 +77,20 @@ jobs:
           zip -r cat.zip .  # 打包 nodejs/dist 文件夹内的所有文件
           mv cat.zip ../  # 将生成的 cat.zip 移动到 nodejs 目录下
 
-      - name: Build Upgrade log
+      - name: Release Note
         if: ${{ env.commit }}
         working-directory: TVBoxOSC/nodejs
         run: |
           lastCommit=$(grep "${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}" ${{ github.workspace }}/README.md |grep -o '[a-z0-9]\{40\}')
           export LESSCHARSET=utf-8
-          echo -e "Credit: [${{ matrix.userName }}/${{ matrix.repoName }}/${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.branchName }}.log
+          echo -e "Credit: [${{ matrix.userName }}/${{ matrix.repoName }}/${{ matrix.branchName }}](${{ env.upStream }})\nCommit: ${{ env.commit }}\nChangelog:" > apk/${{ matrix.userName }}-Release.log
           if [ "${{ env.commit }}" == "${lastCommit}" ]; then
-            git log --pretty=format:%B ${{ env.commitS }} -1 |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- > apk/${{ matrix.branchName }}.log
+            git log --pretty=format:%B ${{ env.commitS }} -1 |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> apk/${{ matrix.userName }}-Release.log
           else
-            git log --pretty=format:%B ${{ env.commitS }}...${lastCommit:0:7} |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- > apk/${{ matrix.branchName }}.log
+            git log --pretty=format:%B ${{ env.commitS }}...${lastCommit:0:7} |sed -e "s# \{2,\}#\n#g" -e "/^Merge \(pull\|branch\|remote\)/d" -e '/^$/d' |cat -n |sort -k2,2 -k1,1n |uniq -f1 |sort -k1,1n |cut -f2- >> apk/${{ matrix.userName }}-Release.log
           fi
 
-      - name: Build Upgrade content
-        if: ${{ env.commit }}
-        working-directory: TVBoxOSC/nodejs
-        run: |
-          echo "versionCode=$(grep -oP 'versionCode \K\d+' app/build.gradle)" >> $GITHUB_ENV
-          echo "versionName=$(grep -oP 'versionName \"\K[^\"]+' app/build.gradle)" >> $GITHUB_ENV
-          echo "desc=$(awk 'BEGIN{ORS="\\\\n"}{print NR ": " $0}' apk/${{ matrix.branchName }}.log)" >> $GITHUB_ENV
+
 
       - name: Release and Upload Assets
         uses: ncipollo/release-action@v1
@@ -104,12 +98,12 @@ jobs:
         with:
           name: ${{ matrix.repoName }}
           tag: ${{ matrix.branchName }}
-          bodyFile: TVBoxOSC/media/apk/${{ matrix.userName }}-Release.log
+          bodyFile: TVBoxOSC/nodejs/apk/${{ matrix.userName }}-Release.log
           allowUpdates: true
           removeArtifacts: true
           artifacts: |
-            TVBoxOSC/media/apk/*.apk
-            TVBoxOSC/media/source-${{ env.commitS }}.*  
+            TVBoxOSC/nodejs/apk/*.apk
+            TVBoxOSC/nodejs/source-${{ env.commitS }}.*  
 
       - name: Push to master
         if: ${{ env.commit }}
@@ -121,9 +115,6 @@ jobs:
           git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git pull --rebase
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}\/tree\/${{ matrix.branchName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
-          sed -i 's/"code": "[a-zA-Z0-9]*"/"code": "${{ env.versionCode }}"/' update/${{ matrix.branchName }}.json
-          sed -i 's/"name": "[^"]*"/"name": "${{ env.versionName }}"/' update/${{ matrix.branchName }}.json
-          sed -i 's|"desc": ".*"|"desc": "${{ env.desc }}"|g' update/${{ matrix.branchName }}.json
           git add --all
           git commit -m "${{ env.commit }}"
           git push -u -f origin master
