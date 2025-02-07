@@ -305,7 +305,7 @@
                 <td>备注</td>
             </tr>
             <tr>
-                <td rowspan="18">魔百盒</td>
+                <td rowspan="23">魔百盒</td>
                 <td>CM101S/CM101S-2</td>
                 <td></td>
                 <td></td>
@@ -467,16 +467,72 @@
                 <td>备注</td>
             </tr>
             <tr>
-                <td>九联</td>
-                <td>单</td>
-                <td>单</td>
-                <td>4.4.2</td>
-                <td>4.4.2</td>
+                <td rowspan="9">九联</td>
+                <td>UNT400B/C/D</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>备注</td>
             </tr>
             <tr>
-                <td>烽火</td>
-                <td>单</td>
+                <td>UNT400G</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>UNT400G1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>UNT401H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>UNT402A</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>UNT402H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>UNT403A</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>UNT403G/UNT413G</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>UNT413A</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td rowspan="9">烽火</td>
+                <td>HG680KA</td>
                 <td>单</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
