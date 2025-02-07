@@ -1,1 +1,203 @@
-<!DOCTYPE html><html><head>    <title>6列10行表格</title>    <style>        table {            width: 100%;            border-collapse: collapse;        }        th, td {            border: 1px solid black;            padding: 8px;            text-align: center;        }        th {            background-color: #f2f2f2;        }    </style></head><body>    <table>        <thead>            <tr>                <th>项目名称</th>                <th>描述</th>                <th>状态</th>                <th>负责人</th>                <th>截止日期</th>                <th>备注</th>            </tr>        </thead>        <tbody>            <tr>                <td>项目A</td>                <td>这是项目A的描述</td>                <td>在进行中</td>                <td>张三</td>                <td>2025-03-01</td>                <td>无</td>            </tr>            <tr>                <td rowspan="5">项目B</td>                <td>这是项目B的描述</td>                <td>已完成</td>                <td>李四</td>                <td>2025-02-28</td>                <td>无</td>            </tr>            <tr>                <td>这是项目B的第二行描述</td>                <td>已完成</td>                <td>李四</td>                <td>2025-02-28</td>                <td>无</td>            </tr>            <tr>                <td>这是项目B的第三行描述</td>                <td>已完成</td>                <td>李四</td>                <td>2025-02-28</td>                <td>无</td>            </tr>            <tr>                <td>这是项目B的第四行描述</td>                <td>已完成</td>                <td>李四</td>                <td>2025-02-28</td>                <td>无</td>            </tr>            <tr>                <td>这是项目B的第五行描述</td>                <td>已完成</td>                <td>李四</td>                <td>2025-02-28</td>                <td>无</td>            </tr>            <tr>                <td>项目C</td>                <td>这是项目C的描述</td>                <td>待启动</td>                <td>王五</td>                <td>2025-03-15</td>                <td>无</td>            </tr>            <tr>                <td>项目D</td>                <td>这是项目D的描述</td>                <td>在进行中</td>                <td>赵六</td>                <td>2025-03-20</td>                <td>无</td>            </tr>            <tr>                <td>项目E</td>                <td>这是项目E的描述</td>                <td>已完成</td>                <td>孙七</td>                <td>2025-03-25</td>                <td>无</td>            </tr>            <tr>                <td>项目F</td>                <td>这是项目F的描述</td>                <td>待启动</td>                <td>周八</td>                <td>2025-04-01</td>                <td>无</td>            </tr>        </tbody>    </table></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>机顶盒信息</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>品牌</th>
+                <th>型号</th>
+                <th>芯片</th>
+                <th>原系统</th>
+                <th>刷机系统</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="18">中兴</td>
+                <td>B760HV2</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B760EV3</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860A</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV1.1</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV1.1T</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV1.1-T2</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV1.2</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV2.1</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV2.2</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV3.1-M2</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV3.1-T2</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV3.2-M</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B860AV3.2-T</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B862AV3.1-M2</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B862AV3.2M</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B863AV3.1-M2</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B863AV3.2M</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>B863AV3.2T</td>
+                <td>单元格3</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>华为</td>
+                <td>单元格5</td>
+                <td>单元格6</td>
+                <td>单元格4</td>
+                <td>单元格5</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>创维</td>
+                <td>单</td>
+                <td>单</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>魔百盒</td>
+                <td>单</td>
+                <td>单</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>九联</td>
+                <td>单</td>
+                <td>单</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>烽火</td>
+                <td>单</td>
+                <td>单</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>创维</td>
+                <td>单</td>
+                <td>单</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>创维</td>
+                <td>单</td>
+                <td>单</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
