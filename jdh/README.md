@@ -623,7 +623,7 @@
                 <td>备注</td>
             </tr>
             <tr>
-                <td rowspan="7">海信</td>
+                <td rowspan="9">海信</td>
                 <td>IP102H</td>
                 <td>单</td>
                 <td>4.4.2</td>
