@@ -631,10 +631,10 @@
             </tr>
             <tr>
                 <td>HG680KB</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>无线</td>
+                <td>Hi3798MV310</td>
+                <td>4.4.2</td>
+                <td>9.0</td>
+                <td>2.4/5G</td>
                 <td>备注</td>
             </tr>
             <tr>
