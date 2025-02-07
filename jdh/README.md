@@ -531,7 +531,7 @@
                 <td>备注</td>
             </tr>
             <tr>
-                <td rowspan="9">烽火</td>
+                <td rowspan="13">烽火</td>
                 <td>HG680-GC/GY</td>
                 <td>单</td>
                 <td>4.4.2</td>
@@ -623,7 +623,71 @@
                 <td>备注</td>
             </tr>
             <tr>
-                <td>创维</td>
+                <td rowspan="7">海信</td>
+                <td>IP102H</td>
+                <td>单</td>
+                <td>4.4.2</td>
+                <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>IP103H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>IP105H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>IP108H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>IP112H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>IP202H/IP203H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>IP501H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>IP903H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>IP906H</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td rowspan="13">创维</td>
                 <td>单</td>
                 <td>单</td>
                 <td>4.4.2</td>
@@ -631,11 +695,10 @@
                 <td>备注</td>
             </tr>
             <tr>
-                <td>创维</td>
-                <td>单</td>
-                <td>单</td>
-                <td>4.4.2</td>
-                <td>4.4.2</td>
+                <td>IP103H</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>备注</td>
             </tr>
         </tbody>
