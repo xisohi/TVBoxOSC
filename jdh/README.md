@@ -206,7 +206,7 @@
                 <td>备注</td>
             </tr>
             <tr>
-                <td rowspan="18">创维</td>
+                <td rowspan="14">创维</td>
                 <td>E820</td>
                 <td>单</td>
                 <td>4.4.2</td>
