@@ -10,6 +10,7 @@
                 <th>芯片</th>
                 <th>原系统</th>
                 <th>刷机系统</th>
+                <th>无线</th>
                 <th>备注</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -27,6 +29,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -34,6 +37,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -41,6 +45,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -48,6 +53,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -55,6 +61,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -62,6 +69,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -69,6 +77,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -76,6 +85,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -83,6 +93,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -90,6 +101,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -97,6 +109,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -104,6 +117,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -111,6 +125,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -118,6 +133,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -125,6 +141,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -132,6 +149,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -139,6 +157,7 @@
                 <td>单元格3</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -147,6 +166,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -154,6 +174,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -161,6 +182,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -168,6 +190,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -175,6 +198,7 @@
                 <td>HI3798MV200</td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -182,6 +206,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -189,6 +214,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -196,6 +222,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -203,6 +230,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -211,6 +239,7 @@
                 <td>单</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -218,6 +247,7 @@
                 <td>高安版</td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -225,6 +255,7 @@
                 <td>非高安版</td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -232,6 +263,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -239,6 +271,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -246,6 +279,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -253,6 +287,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -260,6 +295,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -267,6 +303,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -274,6 +311,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -281,6 +319,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -288,6 +327,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -295,6 +335,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -302,6 +343,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -310,6 +352,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -317,6 +360,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -324,6 +368,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -331,6 +376,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -338,6 +384,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -345,6 +392,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -352,6 +400,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -359,6 +408,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -366,6 +416,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -373,6 +424,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -380,6 +432,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -387,6 +440,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -394,6 +448,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -401,6 +456,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -408,6 +464,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -415,6 +472,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -422,6 +480,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -429,6 +488,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -436,6 +496,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -443,6 +504,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -450,6 +512,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -457,6 +520,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -464,6 +528,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -472,6 +537,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -479,6 +545,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -486,6 +553,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -493,6 +561,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -500,6 +569,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -507,13 +577,15 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
                 <td>UNT403A</td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>9.0</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -521,6 +593,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -528,6 +601,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -536,6 +610,7 @@
                 <td>单</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -543,6 +618,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -550,6 +626,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -557,6 +634,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -564,6 +642,7 @@
                 <td>GK6323</td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -571,6 +650,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -578,6 +658,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -585,6 +666,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -592,6 +674,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -599,6 +682,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -606,6 +690,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -613,6 +698,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -620,6 +706,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -628,6 +715,7 @@
                 <td>单</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -635,6 +723,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -642,6 +731,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -649,6 +739,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -656,6 +747,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -663,6 +755,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -670,6 +763,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -677,6 +771,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -684,6 +779,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -692,6 +788,7 @@
                 <td>单</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
             <tr>
@@ -699,6 +796,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td>无线</td>
                 <td>备注</td>
             </tr>
         </tbody>
