@@ -532,10 +532,94 @@
             </tr>
             <tr>
                 <td rowspan="9">烽火</td>
-                <td>HG680KA</td>
+                <td>HG680-GC/GY</td>
                 <td>单</td>
                 <td>4.4.2</td>
                 <td>4.4.2</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680KA</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680KAS</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680KB</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680KA/KB</td>
+                <td>GK6323</td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680KB</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680-L</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680-LC/LY/LV</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680-MC/HG680-MY</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680-J/V</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG680-Y</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG820-KK</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>HG820-LK</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>备注</td>
             </tr>
             <tr>
