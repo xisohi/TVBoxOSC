@@ -1,5 +1,5 @@
 {
-  "code": "298",
-  "name": "2.9.8",
-  "desc": "1: Fix bug\n2: Remove conscrypt beacuse gitea\n3: Update build.gradle\n4: Optimize decode\n5: Revert\n6: Clean code\n7: Add Conscrypt\n8: Add back buffer\n9: Optimize\n10: Update TrackNameProvider.java\n11: Update build.gradle\n12: Optimize soft decode\n13: Use jbr-21\n14: Update gradle\n15: Update build.gradle\n16: Update\n17: Update proguard-rules.pro\n18: Update\n"
+  "code": "305",
+  "name": "3.0.5",
+  "desc": "1: Fix build\n2: Update build.gradle\n3: Add newpipe\n4: Fix crash\n5: Remove cronet\n6: Remove zlive\n7: Clean code\n8: Add drmLegacy parse\n9: Revert\n10: Fix bug\n11: Fix\n12: Create similarity.js\n13: Clean\n14: Add chno\n15: Clean drpy\n16: Use byte[]\n17: Update quickjs and remove bb\n18: Update gson\n19: Add conscrypt back again\n20: Update build.gradle\n21: Clean code\n22: Fix bug and clean code\n23: Add audio prefer\n24: Fix user info bug\n25: Add av3a\n"
 }
