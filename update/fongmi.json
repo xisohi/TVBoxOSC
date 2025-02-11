@@ -1,5 +1,5 @@
 {
-  "code": "304",
-  "name": "3.0.4",
-  "desc": "1: 修复已知BUG\n2: # Conflicts:\n3: #	ijkplayer/build.gradle\n4: Update build.gradle\n5: Revert\n6: Fix bug\n7: Fix\n8: Clean code\n9: Create similarity.js\n10: Clean\n11: Add chno\n12: Clean drpy\n13: Use byte[]\n14: Update quickjs and remove bb\n15: Update gson\n16: Add conscrypt back again\n17: Update build.gradle\n18: Clean code\n"
+  "code": "306",
+  "name": "3.0.6",
+  "desc": "1: Update build.gradle\n2: Fix bug\n3: Fix live dialog width\n4: Prevent loop\n5: Fix bug\n6: Update youtube\n7: Clean code\n8: Update build.gradle\n9: Add newpipe\n10: Fix crash\n11: Remove cronet\n12: Remove zlive\n13: Add drmLegacy parse\n"
 }
