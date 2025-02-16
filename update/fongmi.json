@@ -1,5 +1,5 @@
 {
-  "code": "306",
-  "name": "3.0.6",
-  "desc": "1: Update build.gradle\n2: Fix bug\n3: Fix live dialog width\n4: Prevent loop\n5: Fix bug\n6: Update youtube\n7: Clean code\n8: Update build.gradle\n9: Add newpipe\n10: Fix crash\n11: Remove cronet\n12: Remove zlive\n13: Add drmLegacy parse\n"
+  "code": "311",
+  "name": "0215v2",
+  "desc": "1: Update build.gradle\n2:  Fix bu\n3: Fix bug\n4: Support tv background play\n5: Add cronet\n6: Clean code\n7: Fix crash\n8: Add debug setting\n9: Update sample\n10: Disable log\n11: Update build.gradle\n12: Update README.md\n13: Add headers config\n14: Update\n15: Update build.gradle\n16: Update README.md\n17: Fixed title\n18: Support ip for hosts\n19: Update build.gradle\n20: Update README.md\n21: Update proxy\n22: Support hosts\n"
 }
