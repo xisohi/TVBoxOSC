@@ -1,5 +1,5 @@
 {
-  "code": "312",
-  "name": "3.1.2",
-  "desc": "1: Fix layout\n2: Fix restore dialog layout\n3: Update settings.gradle\n4: Clean code\n5: Update build.gradle\n6: Fix ass select\n7: Fix bug\n"
+  "code": "313",
+  "name": "3.1.3",
+  "desc": "1: Support catchup utcend and utc\n2: Support catchup unix\n3: Fix bug\n4: Update build.gradle\n"
 }
