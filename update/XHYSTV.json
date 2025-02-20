@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 250219,
   "VersionName": "250219",
-  "UploadTime": "2025-02-20 07:52:22",
-  "ModifyContent": "",
+  "UploadTime": "2025-02-20 15:25:56",
+  "ModifyContent": "1: 更换logo\n2: 解决itv直播配置偶现不能能播放的问题\n",
   "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
-  "ApkSize": 18832,
-  "ApkMd5": "13ab90a00aa772d194e975b71650e744"
+  "ApkSize": 18964,
+  "ApkMd5": "441fe3236c58ea737c27c833dd8cccde"
 }
