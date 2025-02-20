@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 250204,
   "VersionName": "250204",
-  "UploadTime": "2025-02-18 07:45:28",
+  "UploadTime": "2025-02-20 08:28:58",
   "ModifyContent": "",
-  "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYS/TVBox_XHYS-armeabi-generic.apk",
-  "ApkSize": 28448,
-  "ApkMd5": "bb71567a5a4995ecfe2167f37153c32e"
+  "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYS/XHYS-armeabi-generic.apk",
+  "ApkSize": ,
+  "ApkMd5": ""
 }
