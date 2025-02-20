@@ -96,32 +96,22 @@ jobs:
 #      - name: Prepare App
 #        if: ${{ env.commit }}
 #        working-directory: TVBoxOSC
-#        run: |
-#          rm -rf apk/
-#          mkdir -p apk/
-#          for file in `find ~ -name "*release*.apk" -print`; do
-#            # 获取文件的基本名称
-#            base=$(basename "$file")
-#            # 如果文件是 TVBox_ 开头
-#            if [[ "$base" == TVBox_* ]]; then
-#              new_base=$(echo "$base" | sed "s/release/${{ matrix.repoName }}/")
-#            else
-#              new_base="${{ matrix.repoName }}_Release.apk"
-#            fi
-#            # 移动并重命名文件
-#            mv "$file" "apk/$new_base"
-#          done
-#          mv sourceCode-${{ env.commitS }}.* apk/
-      - name: Prepare App
-        if: ${{ env.commit }}
-        working-directory: TVBoxOSC
         run: |
           rm -rf apk/
           mkdir -p apk/
-          find ~ -type d -iname "release" -print0 | while IFS= read -r -d '' dir; do
-            find "$dir" -type f -name "*.apk" -exec sh -c 'cp "$1" "apk/${1##*/}"' sh {} \;
+          for file in `find ~ -name "*release*.apk" -print`; do
+            # 获取文件的基本名称
+            base=$(basename "$file")
+            # 如果文件是 release- 开头
+            if [[ "$base" == release-* ]]; then
+              new_base=$(echo "$base" | sed "s/release/${{ matrix.repoName }}/")
+            else
+              new_base="${{ matrix.repoName }}_Release.apk"
+            fi
+            # 移动并重命名文件
+            mv "$file" "apk/$new_base"
           done
-
+          mv sourceCode-${{ env.commitS }}.* apk/
       - name: Release Note
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
