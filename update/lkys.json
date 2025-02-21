@@ -1,5 +1,5 @@
 {
-  "code": "311",
-  "name": "3.1.1",
-  "desc": "1: Update ConfigDialog.java\n"
+  "code": "314",
+  "name": "3.1.4",
+  "desc": "1: Fix build\n2: Make libass disable\n3: Support libass\n4: Create dfm-release.aar\n5: Update ExoUtil.java\n6: Update README.md\n7: Support regex\n8: lookup realtime\n9: Fix bug\n10: Update build.gradle\n11: Support catchup utcend and utc\n12: Support catchup unix\n13: Fix layout\n14: Fix restore dialog layout\n15: Update settings.gradle\n16: Clean code\n17: Update build.gradle\n18: Fix ass select\n19: Fix bug\n20:  Fix bu\n21: Support tv background play\n22: Add cronet\n"
 }
