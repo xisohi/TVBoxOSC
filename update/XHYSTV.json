@@ -6,7 +6,7 @@
   "VersionName": "250221",
   "UploadTime": "2025-02-22 15:03:07",
   "ModifyContent": "1: Update build.gradle\n2: Update XWalkUtils.java\n3: 暂时去除base64图片兼容\n4: 优化播放逻辑,减少接口调用\n",
-  "DownloadUrl": "https://mirror.ghproxy.com/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
+  "DownloadUrl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
   "ApkSize": 18964,
   "ApkMd5": "1d7d3375563167012e26c7c56ba01dec"
 }
