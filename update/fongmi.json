@@ -1,5 +1,5 @@
 {
-  "code": "314",
-  "name": "3.1.4",
-  "desc": "1: Update ExoUtil.java\n2: # Conflicts:\n3: #	app/src/main/java/com/fongmi/android/tv/player/exo/ExoUtil.java\n4: Make libass disable\n5: Support libass\n6: Create dfm-release.aar\n7: Update README.md\n8: Support regex\n9: lookup realtime\n10: Fix bug\n11: Update build.gradle\n"
+  "code": "315",
+  "name": "3.1.5",
+  "desc": "1: Fix danmaku size\n2: Clean code\n3: Add danmakuLoad switch\n4: Update Parser.java\n5: Update README.md\n6: Fix bug\n7: Support danmaku\n8: Adjust epg text size\n9: Update build.gradle\n10: Update Players.java\n"
 }
