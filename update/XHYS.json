@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 250206,
-  "VersionName": "250206",
-  "UploadTime": "2025-02-22 18:26:43",
-  "ModifyContent": "",
+  "VersionCode": 250222,
+  "VersionName": "250222",
+  "UploadTime": "2025-02-23 22:27:51",
+  "ModifyContent": "1: 更新 build.gradle\n",
   "DownloadUrl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/XHYS/XHYS-armeabi-generic.apk",
   "ApkSize": 28448,
-  "ApkMd5": "31fb716636ab664b059b122b468028f0"
+  "ApkMd5": "3351c30c0f9e061e243a66bfb750cdc9"
 }
