@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 250206,
   "VersionName": "250206",
-  "UploadTime": "2025-02-20 14:00:05",
-  "ModifyContent": "1: Update build.gradle\n",
+  "UploadTime": "2025-02-22 18:26:43",
+  "ModifyContent": "",
   "DownloadUrl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/XHYS/XHYS-armeabi-generic.apk",
   "ApkSize": 28448,
-  "ApkMd5": "7b4805850a4007e399f18467bc026eab"
+  "ApkMd5": "31fb716636ab664b059b122b468028f0"
 }
