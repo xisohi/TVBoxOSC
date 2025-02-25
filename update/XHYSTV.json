@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 250222,
   "VersionName": "250222",
-  "UploadTime": "2025-02-22 17:11:56",
-  "ModifyContent": "1: Update build.gradle\n2: Update XWalkUtils.java\n",
+  "UploadTime": "2025-02-22 18:03:06",
+  "ModifyContent": "",
   "DownloadUrl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
   "ApkSize": 18964,
-  "ApkMd5": "d70566d479413cb634127ff1c3a46c2a"
+  "ApkMd5": "ff3df4a34a5f718f0289eda50a0e482b"
 }
