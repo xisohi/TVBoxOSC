@@ -1,5 +1,5 @@
 {
   "code": "315",
-  "name": "3.1.5",
-  "desc": "1: Fix danmaku size\n2: Clean code\n3: Add danmakuLoad switch\n4: Update Parser.java\n5: Update README.md\n6: Fix bug\n7: Support danmaku\n8: Adjust epg text size\n9: Update build.gradle\n10: Update Players.java\n"
+  "name": "0225",
+  "desc": "1: Fix shadow\n2: Clean code\n3: Update build.gradle\n4: Fix bug\n5: Update DanmakuData.java\n6: Fix xml check\n7: Update build.gradle\n8: Support multiple danmaku - part 2\n9: Support multiple danmaku\n10: Update Spider.java\n11: Fix bug\n12: Add empty view\n13: Update build.gradle\n14: Fix google tv bug\n15: Add file chooser for mobile\n16: Add choose file for config\n17: Add file picker for tv\n18: Add danmaku show/hide setting\n19: Fix size\n20: Fix bug\n21: Update Danmaku.java\n22: Support txt dammuku\n"
 }
