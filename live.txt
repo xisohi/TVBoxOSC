@@ -70,7 +70,7 @@ CCTV13,https://pi.0472.org/tv/fct.php?auth=2310201855
 CCTV6,http://live.lcjly.cn/douyin/69416429589
 江苏卫视,http://live.lcjly.cn/douyin/417926571322
 大湾区卫视,http://live.lcjly.cn/douyin/603789803277
-
+合信佳,rtmp://61.48.253.63/live/1
 🎡港澳台,#genre#
 凤凰卫视,http://58.144.154.93/qctv.fengshows.cn/live/0701pcc72.m3u8
 凤凰资讯,http://58.144.154.93/qctv.fengshows.cn/live/0701pin72.m3u8
