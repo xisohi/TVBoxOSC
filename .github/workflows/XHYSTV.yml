@@ -28,7 +28,7 @@ jobs:
           - userName: xisohi
             repoName: XHYSTV
             branchName: main
-            java_ver: 8  # 定义 Java 版本
+            java_ver: 17  # 定义 Java 版本
     steps:
       - name: Checkout
         uses: actions/checkout@v4
