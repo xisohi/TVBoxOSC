@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 250222,
   "VersionName": "250222",
-  "UploadTime": "2025-02-22 18:03:06",
-  "ModifyContent": "",
+  "UploadTime": "2025-02-27 11:37:01",
+  "ModifyContent": "1: gradle restore;\n2: 直播菜单多源切换;\n3: 重试逻辑优化(自动切播放器,都失败后切换回原播放器);回车搜索和软键盘确定直接搜索;\n4: 遥控上键刷新,长按菜单进入设置;优化扫码后进入对应页面;\n5: fix部分爬虫导致的播放器崩溃\n6: Update gradle.properties\n7: change gradle\n8: Update build.gradle\n9: 直播配置支持.m3u;尝试解决打包权限问题;恢复base64图片\n10: fix bug\n11: 修正exo点播异常;搜索分词修复;设置添加历史配置;支持读取用户自定义doh{"spider":"","doh":[{"name":"Google","url":"https://dns.google/dns-query","ips":["8.8.4.4","8.8.8.8"]}]}\n",
   "DownloadUrl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
-  "ApkSize": 18964,
-  "ApkMd5": "ff3df4a34a5f718f0289eda50a0e482b"
+  "ApkSize": 18990,
+  "ApkMd5": "1f1e3f74ed166e10950f8382db72aa03"
 }
