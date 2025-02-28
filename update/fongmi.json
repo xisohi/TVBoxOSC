@@ -1,5 +1,5 @@
 {
-  "code": "315",
-  "name": "0225",
-  "desc": "1: Fix shadow\n2: Clean code\n3: Update build.gradle\n4: Fix bug\n5: Update DanmakuData.java\n6: Fix xml check\n7: Update build.gradle\n8: Support multiple danmaku - part 2\n9: Support multiple danmaku\n10: Update Spider.java\n11: Fix bug\n12: Add empty view\n13: Update build.gradle\n14: Fix google tv bug\n15: Add file chooser for mobile\n16: Add choose file for config\n17: Add file picker for tv\n18: Add danmaku show/hide setting\n19: Fix size\n20: Fix bug\n21: Update Danmaku.java\n22: Support txt dammuku\n"
+  "code": "319",
+  "name": "3.1.9",
+  "desc": "1: Update VodConfig.java\n2: # Conflicts:\n3: #	app/src/main/java/com/fongmi/android/tv/api/config/VodConfig.java\n4: Update build.gradle\n5: Clean code\n6: Fix bug\n7: Update Download.java\n8: Optimize updater\n9: Update build.gradle\n10: Fix scan\n11: Optimize scan task\n12: Optimize danmaku load\n13: Force leanback use file activity\n14: Fix bug\n15: Add danmaku for control dialog\n16: Support single xml epg\n17: Adjust danmaku\n18: Add trans for hot and suggest\n19: show keyboard when search\n20: Remove xtream code\n"
 }
