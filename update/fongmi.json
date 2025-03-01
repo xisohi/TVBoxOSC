@@ -1,5 +1,5 @@
 {
   "code": "319",
   "name": "3.1.9",
-  "desc": "1: Update VodConfig.java\n2: # Conflicts:\n3: #	app/src/main/java/com/fongmi/android/tv/api/config/VodConfig.java\n4: Update build.gradle\n5: Clean code\n6: Fix bug\n7: Update Download.java\n8: Optimize updater\n9: Update build.gradle\n10: Fix scan\n11: Optimize scan task\n12: Optimize danmaku load\n13: Force leanback use file activity\n14: Fix bug\n15: Add danmaku for control dialog\n16: Support single xml epg\n17: Adjust danmaku\n18: Add trans for hot and suggest\n19: show keyboard when search\n20: Remove xtream code\n"
+  "desc": "1: Fix bug\n"
 }
