@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 250222,
-  "VersionName": "250222",
-  "UploadTime": "2025-02-27 11:37:01",
-  "ModifyContent": "1: gradle restore;\n2: 直播菜单多源切换;\n3: 重试逻辑优化(自动切播放器,都失败后切换回原播放器);回车搜索和软键盘确定直接搜索;\n4: 遥控上键刷新,长按菜单进入设置;优化扫码后进入对应页面;\n5: fix部分爬虫导致的播放器崩溃\n6: Update gradle.properties\n7: change gradle\n8: Update build.gradle\n9: 直播配置支持.m3u;尝试解决打包权限问题;恢复base64图片\n10: fix bug\n11: 修正exo点播异常;搜索分词修复;设置添加历史配置;支持读取用户自定义doh{"spider":"","doh":[{"name":"Google","url":"https://dns.google/dns-query","ips":["8.8.4.4","8.8.8.8"]}]}\n",
+  "VersionCode": 250301,
+  "VersionName": "250301",
+  "UploadTime": "2025-03-01 15:08:27",
+  "ModifyContent": "1: 修复已知BUG\n2: # Conflicts:\n3: #	app/src/main/java/com/github/tvbox/osc/util/XWalkUtils.java\n4: 优化api设置;修多直播源切换时偶现闪退主页的bug;兼容本地file://配置文件\n",
   "DownloadUrl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
-  "ApkSize": 18990,
-  "ApkMd5": "1f1e3f74ed166e10950f8382db72aa03"
+  "ApkSize": 18989,
+  "ApkMd5": "9800bf2d268cdb1462e53825c4b2e810"
 }
