@@ -72,9 +72,9 @@ CCTV6,http://live.lcjly.cn/douyin/69416429589
 大湾区卫视,http://live.lcjly.cn/douyin/603789803277
 合信佳,rtmp://61.48.253.63/live/1
 🎡港澳台,#genre#
-凤凰卫视,http://58.144.154.93/qctv.fengshows.cn/live/0701pcc72.m3u8
-凤凰资讯,http://58.144.154.93/qctv.fengshows.cn/live/0701pin72.m3u8
-凤凰香港,http://58.144.154.93/qctv.fengshows.cn/live/0701phk72.m3u8
+凤凰卫视,http://dns.yiandrive.com:15907/phenix/fhzw
+凤凰资讯,http://dns.yiandrive.com:15907/phenix/fhzx
+凤凰香港,http://dns.yiandrive.com:15907/phenix/fhhk
 凤凰卫视,http://50.7.238.114:8278/phoenixtv_hd/playlist.m3u8?tid=m18f421b0e58b&ct=18336&tsum=8e0cca627477cbd534c9cef5e2c17c1c
 凤凰资讯,http://50.7.238.114:8278/phoenixinfo_hd/playlist.m3u8?tid=MB5B7253262872532628&ct=19249&tsum=e2b2dcd00f39adb64b6c03601da1e0e0
 TVBS,http://50.7.238.114:8278/tvbs/playlist.m3u8?tid=ME2E6545230665452306&ct=19234&tsum=ff0df01c2935843c8c4543428728ce28
