@@ -4,9 +4,9 @@
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
   "VersionCode": 250301,
   "VersionName": "250301",
-  "UploadTime": "2025-03-01 15:08:27",
-  "ModifyContent": "1: 修复已知BUG\n2: # Conflicts:\n3: #	app/src/main/java/com/github/tvbox/osc/util/XWalkUtils.java\n4: 优化api设置;修多直播源切换时偶现闪退主页的bug;兼容本地file://配置文件\n",
+  "UploadTime": "2025-03-02 20:27:40",
+  "ModifyContent": "1: 图片圆角问题修复;优化直播菜单加载逻辑;EPG信息修正;\n",
   "DownloadUrl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
   "ApkSize": 18989,
-  "ApkMd5": "9800bf2d268cdb1462e53825c4b2e810"
+  "ApkMd5": "0e10c8abce55fa249b8f457eab35ef78"
 }
