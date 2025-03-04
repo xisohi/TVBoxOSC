@@ -1,6 +1,6 @@
 {
-  "code": "317",
-  "name": "3.1.7",
-  "desc": "1: Update build.gradle\n2: Fix bug\n3: Add danmaku for control dialog\n4: Clean code\n5: Support single xml epg\n6: Adjust danmaku\n7: Add trans for hot and suggest\n8: show keyboard when search\n9: Remove xtream code\n10: Fix shadow\n11: Fix bug\n12: Update DanmakuData.java\n13: Fix xml check\n14: Update build.gradle\n15: Support multiple danmaku - part 2\n16: Support multiple danmaku\n17: Update Spider.java\n18: Fix bug\n19: Add empty view\n20: Update build.gradle\n21: Fix google tv bug\n22: Add file chooser for mobile\n23: Add choose file for config\n24: Add file picker for tv\n25: Add danmaku show/hide setting\n26: Fix size\n27: Fix bug\n28: Update Danmaku.java\n29: Support txt dammuku\n30: Fix danmaku size\n31: Add danmakuLoad switch\n32: Update Parser.java\n33: Update README.md\n34: Fix bug\n35: Support danmaku\n36: Adjust epg text size\n37: Update build.gradle\n38: Update Players.java\n",
+  "code": "322",
+  "name": "3.2.2",
+  "desc": "1: Update VodConfig.java\n2: update\n3: # Conflicts:\n4: #	app/src/leanback/java/com/fongmi/android/tv/Updater.java\n5: #	app/src/main/java/com/fongmi/android/tv/api/config/VodConfig.java\n6: #	app/src/mobile/java/com/fongmi/android/tv/Updater.java\n7: Update build.gradle\n8: Fix crash\n9: Clean code\n10: Add danmaku icon\n11: Optimize danmaku load\n12: Add local danmaku load\n13: Limit xml choose\n14: Add local danmeku load\n15: Update activity_search.xml\n16: Update zhutopin\n17: Update build.gradle\n18: Fix bug\n19: Update Download.java\n20: Optimize updater\n21: Update build.gradle\n22: Fix scan\n23: Optimize scan task\n24: Optimize danmaku load\n25: Force leanback use file activity\n",
   "apkurl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/lkys/{name}"
 }
