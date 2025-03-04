@@ -46,22 +46,26 @@ jobs:
             echo "commit=$commit" >> $GITHUB_ENV
             echo "commitS=${commit:0:7}" >> $GITHUB_ENV
           fi
+      - name: Checkout Source Code
+        if: ${{ env.commit }}
+        run: |
+          git clone ${{ env.upStream }} TVBoxOSC
+          cd TVBoxOSC
+          git checkout ${{ env.commit }}
+          echo "tag=$(git log --date=format:'%y%m%d%H%M' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
+
       - name: Generate Tag Name
         if: ${{ env.commit }}
+        working-directory: TVBoxOSC
         run: |
           TAG_NAME="v$(date +'%y.%m.%d.%H')"
           echo "tag_name=$TAG_NAME" >> $GITHUB_ENV
           VERSION_CODE="$(date +'%y%m%d%H')"
           echo "version_code=$VERSION_CODE" >> $GITHUB_ENV
 
-      - name: Update version
-        if: ${{ env.commit }}
-        run: |
-          sed -i "s/\"version_code\": [0-9]*/\"version_code\": ${{ env.version_code }}/" version.json
-          sed -i "s/\"version_name\": \"v[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*\"/\"version_name\": \"${{ env.tag_name }}\"/" version.json
-
       - name: Commit and push version.json changes
         if: ${{ env.commit }}
+        working-directory: TVBoxOSC
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -73,6 +77,7 @@ jobs:
 
       - name: Create Tag
         if: ${{ env.commit }}
+        working-directory: TVBoxOSC
         run: |
           git tag ${{ env.tag_name }} ${{ env.NEWSHA }}
           git push origin ${{ env.tag_name }}
