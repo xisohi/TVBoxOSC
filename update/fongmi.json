@@ -1,5 +1,5 @@
 {
-  "code": "319",
-  "name": "3.1.9",
-  "desc": "1: Fix bug\n"
+  "code": "322",
+  "name": "3.2.2",
+  "desc": "1: Update build.gradle\n2: Fix crash\n3: Clean code\n4: Add danmaku icon\n5: Optimize danmaku load\n6: Add local danmaku load\n7: Limit xml choose\n8: Add local danmeku load\n9: Update activity_search.xml\n10: Update zhutopin\n11: Update build.gradle\n"
 }
