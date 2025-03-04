@@ -1,6 +1,6 @@
 {
   "code": "322",
   "name": "3.2.2",
-  "desc": "1: Update VodConfig.java\n2: update\n3: # Conflicts:\n4: #	app/src/leanback/java/com/fongmi/android/tv/Updater.java\n5: #	app/src/main/java/com/fongmi/android/tv/api/config/VodConfig.java\n6: #	app/src/mobile/java/com/fongmi/android/tv/Updater.java\n7: Update build.gradle\n8: Fix crash\n9: Clean code\n10: Add danmaku icon\n11: Optimize danmaku load\n12: Add local danmaku load\n13: Limit xml choose\n14: Add local danmeku load\n15: Update activity_search.xml\n16: Update zhutopin\n17: Update build.gradle\n18: Fix bug\n19: Update Download.java\n20: Optimize updater\n21: Update build.gradle\n22: Fix scan\n23: Optimize scan task\n24: Optimize danmaku load\n25: Force leanback use file activity\n",
+  "desc": "1: Update Updater.java\n",
   "apkurl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/lkys/{name}"
 }
