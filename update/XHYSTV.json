@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "新春快乐",
   "UpdateStatus": 3,//1、默认更新2、强制更新3、使用系统弹窗提示
-  "VersionCode": 250301,
-  "VersionName": "250301",
-  "UploadTime": "2025-03-02 20:27:40",
-  "ModifyContent": "1: 图片圆角问题修复;优化直播菜单加载逻辑;EPG信息修正;\n",
+  "VersionCode": 250303,
+  "VersionName": "250303",
+  "UploadTime": "2025-03-04 12:05:20",
+  "ModifyContent": "1: update gradle\n2: 修播放重试bug\n3: 增加去广告开关(默认未打开);其他细节调整优化;\n4: 优化api设置;\n5: 修多直播源切换时偶现闪退主页的bug;\n6: 兼容本地file://配置文件\n7: 图片圆角问题修复;\n8: 优化直播菜单加载逻辑;EPG信息修正;\n9: 修复已知BUG\n10: ijk播放器优化;\n",
   "DownloadUrl": "https://ghfast.top/https://github.com/xisohi/TVBoxOSC/releases/download/XHYSTV/XHYSTV.apk",
-  "ApkSize": 18989,
-  "ApkMd5": "0e10c8abce55fa249b8f457eab35ef78"
+  "ApkSize": 18991,
+  "ApkMd5": "cba9ee7788fd0b64b2ac18e8292bf4b8"
 }
