@@ -105,7 +105,7 @@ jobs:
         run: |
           rm -rf apk/
           mkdir -p apk/
-          for file in `find ~ -name "*release*.apk" -print`; do
+            for file in `find app/build/outputs/apk/release -name "*unsigned-signed*.apk" -print`; do
             # 获取文件的基本名称
             base=$(basename "$file")
             # 如果文件是 release- 开头
