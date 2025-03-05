@@ -53,7 +53,7 @@ jobs:
           git clone ${{ env.upStream }} TVBoxOSC
           cd TVBoxOSC
           git checkout ${{ env.commit }}
-          echo "tag=$(git log --date=format:'%y.%m.%d.%H' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
+          echo "tag=$(git log --date=format:'%y%m%d%H' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
 
       - name: Compress Source Code
         if: ${{ env.commit }}
@@ -85,7 +85,7 @@ jobs:
             mv "$file" "apk/$new_base"
           done
           mv sourceCode-${{ env.commitS }}.* apk/
-          
+
       - name: Release Note
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
@@ -124,8 +124,8 @@ jobs:
           git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git pull --rebase
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
-          sed -i 's/"version_code": [a-zA-Z0-9]*/"version_code": ${{ env.version_code }}/' update/${{ matrix.repoName }}.json
-          sed -i 's/"version_name": "[^"]*"/"version_name": "${{ env.tag_name }}"/' update/${{ matrix.repoName }}.json
+          sed -i 's/"version_code": [a-zA-Z0-9]*/"version_code": ${{ env.tag }}/' update/${{ matrix.repoName }}.json
+          sed -i 's/"version_name": "[^"]*"/"version_name": "${{ env.tag }}"/' update/${{ matrix.repoName }}.json
           git add --all
           git commit -m "${{ env.commit }}"
           git push -u -f origin master
