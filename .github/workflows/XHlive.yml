@@ -54,7 +54,6 @@ jobs:
           cd TVBoxOSC
           git checkout ${{ env.commit }}
           echo "tag=$(git log --date=format:'%y%m%d%H' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
-          echo "tag_name=$(git log --date=format:'%y.%m.%d.%H' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
 
       - name: Compress Source Code
         if: ${{ env.commit }}
@@ -69,6 +68,15 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: 'gradle'
+
+      - name: Set versionCode and versionName
+        if: ${{ env.commit }}
+        working-directory: TVBoxOSC
+        run: |
+          # 设置 versionCode
+          sed -i 's/versionCode = [0-9]*/versionCode = ${{ env.tag }}/g' app/build.gradle.kts
+          # 设置 versionName
+          sed -i 's/versionName = "[^"]*"/versionName = "${{ env.tag }}"/g' app/build.gradle.kts
 
       - name: Build project
         if: ${{ env.commit }}
@@ -86,18 +94,6 @@ jobs:
           keyPassword: ${{ secrets.ALIAS_PASSWORD }}
         env:
           BUILD_TOOLS_VERSION: "34.0.0"
-
-      - name: Print Signed APK Information
-        if: ${{ env.commit }}
-        working-directory: TVBoxOSC/app/build/outputs/apk/release
-        run: |
-          if ls *.apk 1> /dev/null 2>&1; then
-            echo "Found signed APK files:"
-            ls -lh *.apk
-          else
-            echo "No signed APK files found in $(pwd)"
-            exit 1
-          fi
 
       - name: Prepare App
         if: ${{ env.commit }}
@@ -158,7 +154,7 @@ jobs:
           git pull --rebase
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
           sed -i 's/"version_code": [a-zA-Z0-9]*/"version_code": ${{ env.tag }}/' update/${{ matrix.repoName }}.json
-          sed -i 's/"version_name": "[^"]*"/"version_name": "${{ env.tag_name }}"/' update/${{ matrix.repoName }}.json
+          sed -i 's/"version_name": "[^"]*"/"version_name": "${{ env.tag }}"/' update/${{ matrix.repoName }}.json
           git add --all
           git commit -m "${{ env.commit }}"
           git push -u -f origin master
