@@ -27,13 +27,14 @@ jobs:
           - userName: xisohi
             repoName: XHlive
             branchName: main
+            java_ver: 17
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Check New Commit
+      - name: Check New Commit # 检查是否有新提交
         run: |
           upStream="https://github.com/${{  matrix.userName }}/${{ matrix.repoName }}"
           echo "upStream=$upStream" >> $GITHUB_ENV
@@ -46,28 +47,45 @@ jobs:
             echo "commit=$commit" >> $GITHUB_ENV
             echo "commitS=${commit:0:7}" >> $GITHUB_ENV
           fi
-      - name: Checkout Source Code
+      - name: Checkout Source Code # 检出源代码
         if: ${{ env.commit }}
         run: |
           git clone ${{ env.upStream }} TVBoxOSC
           cd TVBoxOSC
           git checkout ${{ env.commit }}
-          echo "tag=$(git log --date=format:'%y%m%d%H%M' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
+          echo "tag=$(git log --date=format:'%y.%m.%d.%H' --pretty=format:%cd ${{ env.commitS }} -1)" >> $GITHUB_ENV
 
-      - name: Generate Tag Name
+      - name: Compress Source Code
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: |
-          TAG_NAME="v$(date +'%y.%m.%d.%H')"
-          echo "tag_name=$TAG_NAME" >> $GITHUB_ENV
-          VERSION_CODE="$(date +'%y%m%d%H')"
-          echo "version_code=$VERSION_CODE" >> $GITHUB_ENV
+          tar -cJf sourceCode-${{ env.commitS }}.tar.xz --exclude=.git --exclude=.github *
 
       - name: Build project
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: ./gradlew clean && ./gradlew assembleRelease
 
+      - name: Prepare App
+        if: ${{ env.commit }}
+        working-directory: TVBoxOSC
+        run: |
+          rm -rf apk/
+          mkdir -p apk/
+          for file in `find ~ -name "*release*.apk" -print`; do
+            # 获取文件的基本名称
+            base=$(basename "$file")
+            # 如果文件是 release- 开头
+            if [[ "$base" == release-* ]]; then
+              new_base=$(echo "$base" | sed "s/release/${{ matrix.repoName }}/")
+            else
+              new_base="${{ matrix.repoName }}_Release.apk"
+            fi
+            # 移动并重命名文件
+            mv "$file" "apk/$new_base"
+          done
+          mv sourceCode-${{ env.commitS }}.* apk/
+          
       - name: Release Note
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
