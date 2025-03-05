@@ -101,6 +101,7 @@ jobs:
           signingKeyBase64: ${{ secrets.KEYSTORE }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.ALIAS_PASSWORD }}
+          apk: ${{ matrix.repoName }}_${{ env.tag }}.apk  # 指定具体的 APK 文件
         env:
           BUILD_TOOLS_VERSION: "34.0.0"
 
