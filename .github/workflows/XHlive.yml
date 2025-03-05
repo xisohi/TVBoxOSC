@@ -34,19 +34,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Check New Commit # 检查是否有新提交
-        run: |
-          upStream="https://github.com/${{  matrix.userName }}/${{ matrix.repoName }}"
-          echo "upStream=$upStream" >> $GITHUB_ENV
-          commit=$(curl -sL "https://api.github.com/repos/${{  matrix.userName }}/${{ matrix.repoName }}/commits/${{ matrix.branchName }}" | jq -r '.sha')
-          if [ $? -ne 0 ]; then
-            echo "Failed to get commit from API"
-            exit 1
-          fi
-          if [ -z "$commit" ] || ! grep -q "$commit" README.md; then
-            echo "commit=$commit" >> $GITHUB_ENV
-            echo "commitS=${commit:0:7}" >> $GITHUB_ENV
-          fi
+  - name: Check New Commit # 检查是否有新提交
+    run: |
+      upStream="https://github.com/${{ matrix.userName }}/${{ matrix.repoName }}"
+      echo "upStream=$upStream" >> $GITHUB_ENV
+      commit=$(curl -sL "https://api.github.com/repos/${{ matrix.userName }}/${{ matrix.repoName }}/commits/${{ matrix.branchName }}" | jq -r '.sha')
+      if [ $? -ne 0 ]; then
+        echo "Failed to get commit from API"
+        exit 1
+      fi
+      if [ -z "$commit" ] || ! grep -q "$commit" README.md; then
+        echo "commit=$commit" >> $GITHUB_ENV
+        echo "commitS=${commit:0:7}" >> $GITHUB_ENV
+      fi
       - name: Checkout Source Code # 检出源代码
         if: ${{ env.commit }}
         run: |
@@ -104,7 +104,6 @@ jobs:
           signingKeyBase64: ${{ secrets.KEYSTORE }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.ALIAS_PASSWORD }}
-          apk: ${{ matrix.repoName }}_${{ env.tag }}.apk  # 指定具体的 APK 文件
         env:
           BUILD_TOOLS_VERSION: "34.0.0"
 
