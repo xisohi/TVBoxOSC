@@ -108,7 +108,7 @@ jobs:
             if [[ "$base" == release-* ]]; then
               new_base=$(echo "$base" | sed "s/release/${{ matrix.repoName }}/")
             else
-              new_base="${{ matrix.repoName }}_${{ env.tag }}.apk"
+              new_base="${{ matrix.repoName }}.apk"
             fi
             # 移动并重命名文件
             mv "$file" "apk/$new_base"
